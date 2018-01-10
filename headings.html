@@ -6,57 +6,69 @@
         body {
             margin: 0
         }
-        
+
         .step_1 {
             background-color: #596492;
             background-size: auto;
             font-size: 3em;
+            line-height: 83px;
             height: 83px;
             max-width: 45%;
             min-width: 737px;
-            color: white
+            color: white;
+            margin-left: 37px;
+            margin-top: 25px;
+            padding-left: 50px;
+            font-family: sans-serif
         }
-        
+
         .step_1::before {
             content: "1";
-            padding: 2%;
-            font-size: 72px;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 74px;
+            height: 108px;
+            text-align: center;
+            font-size: 85px;
             border: 3px;
             border-style: solid;
+            background-color: #596492;
             border-color: white;
             border-radius: 50%;
-            margin: 2% 2% 2% 0;
-            overflow: visible
+            padding: 10px;
+            font-family: serif;
         }
-        
+
         .step_1::after {
-            content: url("background_images/step_1.jpg");
+            content: url("background_images/step_1_clear.jpg");
             float: right;
-            
+
         }
-        
+
         .step_2 {
             background-color: #4A967C
         }
-        
+
         .step_3 {
             background-color: #3298AE
         }
-        
+
         .step_4 {
             background-color: #AC5E30
         }
-        
+
         .step_5 {
             background-color: #788952
         }
-        
     </style>
 </head>
-<body>
+
+ <body>
     <h3 class="step_1">Understand the Problem</h3>
-    
-<!--
+
+    <!--
     <h3 class="step_2">Identify Variables & Assumptions</h3>
     
     <h3 class="step_3">Apply Quantitative Tools</h3>
