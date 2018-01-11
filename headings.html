@@ -7,86 +7,163 @@
             margin: 0
         }
 
-        .step_1 {
-            background-color: #596492;
-            background-size: auto;
-            font-size: 3em;
-            line-height: 83px;
-            height: 83px;
-            max-width: 45%;
-            min-width: 737px;
+        h3,
+        h4 {
+            margin: 25px;
+        }
+
+        .step {
             color: white;
-            margin-left: 37px;
+            font-family: sans-serif;
+            font-size: 2em;
+            height: 83px;
+            line-height: 83px;
+            max-width: 850px;
+            margin-left: 50px;
             margin-top: 25px;
-            padding-left: 50px;
-            font-family: sans-serif
+            min-width: 737px;
+            padding-left: 70px;
+            position: relative
         }
 
-        .step_1::before {
-            content: "1";
+        .step::before {
             box-sizing: border-box;
-            position: absolute;
-            left: 0;
-            top: 15px;
-            width: 74px;
-            height: 108px;
-            text-align: center;
-            font-size: 85px;
-            border: 3px;
-            border-style: solid;
-            background-color: #596492;
-            border-color: white;
+            border: 3px solid white;
             border-radius: 50%;
-            padding: 10px;
             font-family: serif;
+            font-size: 85px;
+            height: 108px;
+            left: -37px;
+            padding: 10px;
+            position: absolute;
+            text-align: center;
+            top: -10px;
+            width: 74px;
         }
 
-        .step_1::after {
-            content: url("background_images/step_1_clear.jpg");
+        .one {
+            background-color: #596492;
+        }
+
+        .one::before {
+            content: "1";
+            background-color: #596492;
+        }
+
+        .one::after {
+            content: url("background_images/step_1.jpg");
             float: right;
-
         }
 
-        .step_2 {
+        .two {
             background-color: #4A967C
         }
 
-        .step_3 {
+        .two::before {
+            content: "2";
+            background-color: #4A967C
+        }
+
+        .two::after {
+            content: url("background_images/step_2.jpg");
+            float: right
+        }
+
+        .three {
             background-color: #3298AE
         }
 
-        .step_4 {
+        .three::before {
+            content: "3";
+            background-color: #3298AE
+        }
+
+        .three::after {
+            content: url("background_images/step_3.jpg");
+            float: right
+        }
+
+        .four {
             background-color: #AC5E30
         }
 
-        .step_5 {
+        .four::before {
+            content: "4";
+            background-color: #AC5E30
+        }
+
+        .four::after {
+            content: url("background_images/step_4.jpg");
+            float: right
+        }
+
+        .five {
             background-color: #788952
+        }
+
+        .five::before {
+            content: "5";
+            background-color: #788952
+        }
+
+        .five::after {
+            content: url("background_images/step_5.jpg");
+            float: right
+        }
+        
+        /* tablets */
+        
+        @media screen and (max-width: 960px) {
+            .step {
+                max-width: 350px;
+                min-width: 200px;
+                width: 50%;
+                height: 50px;
+                line-height: 50px;
+            }
+            
+            .step::before {
+                font-size: 55px;
+                height: 75px;
+                width: 60px;
+            }
+            
+            .one {
+                background-image:url(background_images/step_1.jpg)
+            }
+        }
+        
+        /* smartphones */ 
+        
+        @media screen and (max-width: 480px) {
+            body {
+                background-color: black;
+            }
         }
     </style>
 </head>
 
- <body>
-    <h3 class="step_1">Understand the Problem</h3>
+<body>
+    <h3 class="step one">Understand the Problem</h3>
 
-    <!--
-    <h3 class="step_2">Identify Variables & Assumptions</h3>
-    
-    <h3 class="step_3">Apply Quantitative Tools</h3>
-    
-    <h3 class="step_4">Make an Informed Decision</h3>
-    
-    <h3 class="step_5">Evaluate Your Reasoning</h3>
-    
-    <h4 class="step_1">Understand the Problem</h4>
-    
-    <h4 class="step_2">Identify Variables & Assumptions</h4>
-    
-    <h4 class="step_3">Apply Quantitative Tools</h4>
-    
-    <h4 class="step_4">Make an Informed Decision</h4>
-    
-    <h4 class="step_5">Evaluate Your Reasoning</h4>
-    
--->
+    <h3 class="step two">Identify Variables & Assumptions</h3>
+
+    <h3 class="step three">Apply Quantitative Tools</h3>
+
+    <h3 class="step four">Make an Informed Decision</h3>
+
+    <h3 class="step five">Evaluate Your Reasoning</h3>
+
+    <h4 class="step one">Understand the Problem</h4>
+
+    <h4 class="step two">Identify Variables & Assumptions</h4>
+
+    <h4 class="step three">Apply Quantitative Tools</h4>
+
+    <h4 class="step four">Make an Informed Decision</h4>
+
+    <h4 class="step five">Evaluate Your Reasoning</h4>
+
+
 </body>
 </html>
