@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:800');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600');
 
 .step {
     color: white;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-    font-size: 2.5em;
-    height: 83px;
-    line-height: 83px;
+    font-weight: 600;
+    font-size: 1.5em;
+    height: 40px;
+    line-height: 40px;
+    width: 48%;
     max-width: 850px;
     margin: 25px;
-    margin-left: 50px;
+    margin-left: 14px;
     margin-top: 25px;
-    min-width: 737px;
-    padding-left: 50px;
+    padding-left: 25px;
     position: relative;
     background-repeat: no-repeat;
     background-position: right;
@@ -24,19 +24,22 @@
     border: 3px solid white;
     border-radius: 50%;
     font-family: serif;
-    font-size: 85px;
-    height: 108px;
-    left: -37px;
-    padding: 10px;
+    font-size: 2em;
+    height: 53px;
+    left: -20px;
+    padding: 2px;
+    padding-left: 4px;
     position: absolute;
     text-align: center;
-    top: -10px;
-    width: 74px;
+    top: -5px;
+    width: 38px;
 }
+
+
 
 .one {
     background-color: #596492;
-    background-image: url(background_images/step_1.jpg);
+    background-image: url(Images/step_1.jpg);
 }
 
 .one::before {
@@ -46,7 +49,7 @@
 
 .two {
     background-color: #4A967C;
-    background-image: url(background_images/step_2.jpg);
+    background-image: url(Images/step_2.jpg);
 }
 
 .two::before {
@@ -56,7 +59,7 @@
 
 .three {
     background-color: #3298AE;
-    background-image: url(background_images/step_3.jpg);
+    background-image: url(Images/step_3.jpg);
 }
 
 .three::before {
@@ -66,7 +69,7 @@
 
 .four {
     background-color: #AC5E30;
-    background-image: url(background_images/step_4.jpg);
+    background-image: url(Images/step_4.jpg);
 }
 
 .four::before {
@@ -76,7 +79,7 @@
 
 .five {
     background-color: #788952;
-    background-image: url(background_images/step_5.jpg);
+    background-image: url(Images/step_5.jpg);
 }
 
 .five::before {
