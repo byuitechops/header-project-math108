@@ -26,7 +26,7 @@ body {
             border: 3px solid white;
             border-radius: 50%;
             font-family: serif;
-            font-size: 85px;
+            font-size: 2em;
             height: 108px;
             left: -37px;
             padding: 10px;
@@ -114,7 +114,7 @@ body {
             }
             
             .step::before {
-                font-size: 55px;
+                font-size: 1.8em;
                 height: 75px;
                 width: 50px;
             }
