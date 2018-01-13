@@ -7,9 +7,8 @@
     font-size: 1.5em;
     height: 40px;
     line-height: 40px;
-    width: 48%;
-/*    max-width: 850px;*/
-    min-width: 365px;
+    width: 50%;
+    min-width: 400px;
     margin: 25px;
     margin-left: 14px;
     margin-top: 25px;
@@ -28,8 +27,11 @@
     font-size: 2em;
     height: 53px;
     left: -20px;
-    padding: 2px;
-    padding-left: 4px;
+    line-height: 46px;
+/*
+    padding-top: 3px;
+    padding-left: 2px;
+*/
     position: absolute;
     text-align: center;
     top: -5px;
@@ -40,7 +42,7 @@
 
 .one {
     background-color: #596492;
-    background-image: url(Images/step_1.jpg);
+    background-image: url(Images/step_1.png);
 }
 
 .one::before {
@@ -50,7 +52,7 @@
 
 .two {
     background-color: #4A967C;
-    background-image: url(Images/step_2.jpg);
+    background-image: url(Images/step_2.png);
 }
 
 .two::before {
@@ -60,7 +62,7 @@
 
 .three {
     background-color: #3298AE;
-    background-image: url(Images/step_3.jpg);
+    background-image: url(Images/step_3.png);
 }
 
 .three::before {
@@ -70,7 +72,7 @@
 
 .four {
     background-color: #AC5E30;
-    background-image: url(Images/step_4.jpg);
+    background-image: url(Images/step_4.png);
 }
 
 .four::before {
@@ -80,7 +82,7 @@
 
 .five {
     background-color: #788952;
-    background-image: url(Images/step_5.jpg);
+    background-image: url(Images/step_5.png);
 }
 
 .five::before {
@@ -92,10 +94,17 @@
 
 @media screen and (max-width: 960px) {
     .step {
-        width: 70%;
-    }
+        width: 48%;
+/*        min-width: 600px;*/
 /*
+        height: 50px;
+        line-height: 50px;
+        padding-left: 30px;
+        font-size: 2em
+*/
+    }
 
+/*
     .step::before {
         font-size: 55px;
         height: 75px;
@@ -109,20 +118,24 @@
 @media screen and (max-width: 480px) {
     .step {
         width: 75%;
+/*
         min-width: 400px;
         font-size: 1.2em;
         height: 40px;
         line-height: 40px;
         padding-left: 30px;
         margin-left: 20px
+*/
     }
+/*
     .step::before {
+        width: 37px;
         font-size: .75em;
         font-size: 2.4rem;
         height: 55px;
-        width: 37px;
         top: -7px;
         left: -19px;
         padding: 6px 0px;
     }
+*/
 }
