@@ -88,35 +88,38 @@
     background-color: #788952
 }
 
+/*Since we have a min-width in the original instructions, adding a width of to the the media queries for width is redundant.*/
+
 /* tablets */
 
 @media screen and (max-width: 960px) {
-    .step {
-        /* width: 48%; */
-/*        min-width: 600px;*/
+    
+    /*Unneccesary because it's all the same dimensions as the original*/
 /*
+    .step {
+         width: 48%; 
+        min-width: 600px;
         height: 50px;
         line-height: 50px;
         padding-left: 30px;
         font-size: 2em
-*/
     }
 
-/*
     .step::before {
         font-size: 55px;
         height: 75px;
         width: 50px;
     }
-*/
 }
+*/
 
 /* smartphones  */
 
 @media screen and (max-width: 480px) {
     .step {
-        /*
-        width: 75%;
+        
+        width: 100%;
+/*
         min-width: 400px;
         font-size: 1.2em;
         height: 40px;
@@ -124,6 +127,7 @@
         padding-left: 30px;
         margin-left: 20px
 */
+
     }
 /*
     .step::before {
