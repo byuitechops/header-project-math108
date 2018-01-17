@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 
+
+
 .section h3.step,
 .section h4.step {
     color: white;
@@ -10,7 +12,7 @@
     line-height: 35px;
     width: 47%;
     min-width: 380px;
-    margin: 66px 0px 15px 14px;
+    margin: 0px 0px 15px 14px;
     padding-top: 0px;
     padding-left: 24px;
     position: relative;
