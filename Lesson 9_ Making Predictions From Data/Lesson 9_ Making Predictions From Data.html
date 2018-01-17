@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0118)file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#_apply_quantitative_tools_21 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<meta name="generator" content="pandoc">
+
+
+
+
+<title>Lesson 9: Making Predictions From Data</title>
+
+<script src="./Lesson 9_ Making Predictions From Data_files/jquery.min.js.download"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./Lesson 9_ Making Predictions From Data_files/journal.min.css" rel="stylesheet">
+<script src="./Lesson 9_ Making Predictions From Data_files/bootstrap.min.js.download"></script>
+<script src="./Lesson 9_ Making Predictions From Data_files/html5shiv.min.js.download"></script>
+<script src="./Lesson 9_ Making Predictions From Data_files/respond.min.js.download"></script>
+<script src="./Lesson 9_ Making Predictions From Data_files/jquery-ui.min.js.download"></script>
+<link href="./Lesson 9_ Making Predictions From Data_files/jquery.tocify.css" rel="stylesheet">
+<script src="./Lesson 9_ Making Predictions From Data_files/jquery.tocify.js.download"></script>
+<script src="./Lesson 9_ Making Predictions From Data_files/tabsets.js.download"></script>
+<link href="./Lesson 9_ Making Predictions From Data_files/default.css" rel="stylesheet">
+<script src="./Lesson 9_ Making Predictions From Data_files/highlight.js.download"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="./Lesson 9_ Making Predictions From Data_files/styles.css" type="text/css">
+
+<script src="./Lesson 9_ Making Predictions From Data_files/MathJax.js.download" id=""></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.1') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 61px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+
+.section h2 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h3 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h4 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h5 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h6 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+<ul id="tocify-header0" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="opening_story">Opening Story</li></ul><ul id="tocify-header1" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="introduction" style="cursor: pointer;">Introduction</li></ul><ul id="tocify-header2" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="input_and_output_variables">Input and Output Variables</li></ul><ul id="tocify-header3" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="trendlines">Trendlines</li><ul class="tocify-subheader list-group" data-tag="3" style=""><li class="tocify-item list-group-item" data-unique="community_service_example">Community Service Example</li><li class="tocify-item list-group-item" data-unique="excel_instructions_-_trendlines">Excel Instructions - Trendlines</li><li class="tocify-item list-group-item" data-unique="practice_creating_trendline">Practice Creating Trendline</li></ul></ul><ul id="tocify-header4" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="correlation_vs_causation">Correlation vs Causation</li></ul><ul id="tocify-header5" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="linear,_quadratic,_or_exponential">Linear, Quadratic, or Exponential?</li></ul><ul id="tocify-header6" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="predictions_from_trendlines" style="cursor: pointer;">Predictions from Trendlines</li><ul class="tocify-subheader list-group" data-tag="3" style=""><li class="tocify-item list-group-item" data-unique="_understand_the_problem_">
+Understand the Problem
+</li><li class="tocify-item list-group-item" data-unique="_identify_variables__assumptions_">
+Identify Variables &amp; Assumptions
+</li><li class="tocify-item list-group-item" data-unique="_apply_quantitative_tools_">
+Apply Quantitative Tools
+</li><li class="tocify-item list-group-item" data-unique="_make_an_informed_decision_">
+Make an Informed Decision
+</li><li class="tocify-item list-group-item" data-unique="_evaluate_your_reasoning_">
+Evaluate Your Reasoning
+</li><li class="tocify-item list-group-item" data-unique="practice_making_a_prediction">Practice Making a Prediction</li></ul></ul><ul id="tocify-header7" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="example:_old_faithful" style="cursor: pointer;">Example: Old Faithful</li></ul><ul id="tocify-header8" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="example:_snow_machines_in_yellowstone" style="cursor: pointer;">Example: Snow Machines in Yellowstone</li><ul class="tocify-subheader list-group" data-tag="3" style="display: block;"><li class="tocify-item list-group-item" data-unique="_understand_the_problem_19" style="cursor: pointer;">
+Understand the Problem
+</li><li class="tocify-item list-group-item" data-unique="_identify_variables__assumptions_20" style="cursor: pointer;">
+Identify Variables &amp; Assumptions
+</li><li class="tocify-item list-group-item active" data-unique="_apply_quantitative_tools_21" style="cursor: pointer;">
+Apply Quantitative Tools
+</li><li class="tocify-item list-group-item" data-unique="_make_an_informed_decision_22" style="cursor: pointer;">
+Make an Informed Decision
+</li><li class="tocify-item list-group-item" data-unique="_evaluate_your_reasoning_23" style="cursor: pointer;">
+Evaluate Your Reasoning
+</li></ul></ul><ul id="tocify-header9" class="tocify-header list-group"><li class="tocify-item list-group-item" data-unique="lesson_checklist" style="cursor: pointer;">Lesson Checklist</li></ul></div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/index.html">The Quantative Reasoning Process</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/index.html">Table of Contents</a>
+</li>
+<li class="dropdown">
+  <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit I
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson1.html">Lesson 1</a>
+    </li>
+    <li>
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson2.html">Lesson 2</a>
+    </li>
+    <li>
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson3.html">Lesson 3</a>
+    </li>
+    <li>
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson4.html">Lesson 4</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit II
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson5.html">Lesson 5</a>
+    </li>
+    <li>
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson6.html">Lesson 6</a>
+    </li>
+    <li>
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson7.html">Lesson 7</a>
+    </li>
+    <li>
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson8.html">Lesson 8</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown active">
+  <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Unit III
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="active">
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html">Lesson 9</a>
+    </li>
+    <li>
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson10.html">Lesson 10</a>
+    </li>
+    <li>
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson11.html">Lesson 11</a>
+    </li>
+    <li>
+      <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson12.html">Lesson 12</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lesson 9: Making Predictions From Data</h1>
+
+</div>
+
+
+<div id="opening-story" class="section level2">
+<div name="opening_story" data-unique="opening_story"></div><h2>Opening Story</h2>
+<center>
+<iframe id="kaltura_player" src="./Lesson 9_ Making Predictions From Data_files/1157612.html" width="608" height="350" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" frameborder="0" title="Kaltura Player">
+</iframe>
+</center>
+</div>
+<div id="introduction" class="section level2">
+<div name="introduction" data-unique="introduction"></div><h2>Introduction</h2>
+<p>As Sophia and Emmy traveled through Yellowstone National Park (USA) they encountered situations where <em>data analysis</em> was used to make a decision or a prediction.</p>
+<blockquote>
+<p>Data analysis is the method of collecting, graphing, and analyzing data in order to understand patterns in the data.</p>
+</blockquote>
+<p>In other words, data analysis is used to uncover the truth about a current scenario, a future event, or even what happened in the past.</p>
+<p>Elder Bednar stated, “I long have been impressed with the simple and clear definition of truth set forth in the Book of Mormon: The Spirit speaketh the truth and lieth not. Wherefore, it speaketh of things as they really are, and of things as they really will be; wherefore, these things are manifested unto us plainly, for the salvation of our souls.”<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>While we live in a time where God has revealed many truths, there are still many things that God has not yet revealed. As individuals, our futures are still full of uncertainty. This lesson focuses on analyzing data to make prediction, which gives us quantitative tools to better understand things “as they really are” and predict things “as they really will be.” <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+</div>
+<div id="input-and-output-variables" class="section level2">
+<div name="input_and_output_variables" data-unique="input_and_output_variables"></div><h2>Input and Output Variables</h2>
+<p>One of the most powerful ways to discover how things “really are” is to use known information to help predict, or explain the unknown. This is done using input and output variables, as we have discussed in earlier lessons.</p>
+<p>Mathematicians and statisticians use a variety of different names to refer to input and output variables. We will continue to refer to these variables as inputs and outputs. But it can be helpful to know their other names.</p>
+<table class="table table-condensed">
+<thead>
+<tr class="header">
+<th>Input Variable</th>
+<th>Output Variable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 0.664em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.604em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.54em 2.345em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math-italic;">x</span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-1">x</script></span>-variable</td>
+<td><span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-4" style="width: 0.544em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.48em 2.526em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-5"><span class="mi" id="MathJax-Span-6" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 0.87em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></span></span><script type="math/tex" id="MathJax-Element-2">y</script></span>-variable</td>
+</tr>
+<tr class="even">
+<td>independent variable</td>
+<td>dependent variable</td>
+</tr>
+<tr class="odd">
+<td>explanatory variable</td>
+<td>response variable</td>
+</tr>
+<tr class="even">
+<td>predictor variable</td>
+<td>response variable</td>
+</tr>
+</tbody>
+</table>
+<p>We have seen several examples of input and output variables in previous lessons. In Lesson 7 we read about Sarah, a woman who was trying to improve her health. She used the function <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1860&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-7" style="width: 8.471em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.631em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.324em 1007.57em 2.646em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-8"><span class="mi" id="MathJax-Span-9" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span class="mo" id="MathJax-Span-10" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-11" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-12" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-13" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mn" id="MathJax-Span-14" style="font-family: MathJax_Main; padding-left: 0.303em;">6</span><span class="mi" id="MathJax-Span-15" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-16" style="font-family: MathJax_Main; padding-left: 0.243em;">+</span><span class="mn" id="MathJax-Span-17" style="font-family: MathJax_Main; padding-left: 0.243em;">1860</span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.27em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>6</mn><mi>x</mi><mo>+</mo><mn>1860</mn></math></span></span><script type="math/tex" id="MathJax-Element-3">f(x)=6x+1860</script></span> where the input variable, <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-18" style="width: 0.664em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.604em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.54em 2.345em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-19"><span class="mi" id="MathJax-Span-20" style="font-family: MathJax_Math-italic;">x</span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-4">x</script></span>, represented the number of minutes she walked each day and the output variable, <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-5-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-21" style="width: 2.165em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.925em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.324em 1001.8em 2.646em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-22"><span class="mi" id="MathJax-Span-23" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span class="mo" id="MathJax-Span-24" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-25" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-26" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.27em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-5">f(x)</script></span> or <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-27" style="width: 0.544em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.48em 2.526em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-28"><span class="mi" id="MathJax-Span-29" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 0.87em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></span></span><script type="math/tex" id="MathJax-Element-6">y</script></span>, represented her total caloric expenditure for the day. The total number of calories burned changed in <em>response</em> to how long she walked, and how long she walked <em>explained</em> or <em>predicted</em> how many calories she would burn. Said differently, she was free (or <em>independent</em>) to choose how long she walked, while the total number of calories burned was <em>dependent</em> on her choice of how long she walked. This is just an example of how the alternative names of input and output variables could be used. As stated previously, this lesson will continue to use only the terms “input” and “output” for variables.</p>
+<p>When it is possible two variables might be related, we can use data analysis to explore relationships between the input variable and the output variable. We can create a scatter plot with the input variable on the horizontal axis (<span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-7-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-30" style="width: 0.664em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.604em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.54em 2.345em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-31"><span class="mi" id="MathJax-Span-32" style="font-family: MathJax_Math-italic;">x</span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-7">x</script></span>-axis) and the output variable on the vertical axis (<span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-8-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-33" style="width: 0.544em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.48em 2.526em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-34"><span class="mi" id="MathJax-Span-35" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 0.87em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></span></span><script type="math/tex" id="MathJax-Element-8">y</script></span>-axis). Looking at the scatter plot helps us see if a pattern or trend exists that can be described using a function.</p>
+</div>
+<div id="trendlines" class="section level2">
+<div name="trendlines" data-unique="trendlines"></div><h2>Trendlines</h2>
+<p>When data shows a pattern or trend, we can use the data to make predictions. The predictions may be about some future event, an estimate of what happened in the past, or even a statement about where things are currently. We often use trendlines to describe a trend or correlation in data.</p>
+<blockquote>
+<p>A <em>trendline</em> is the graph of a function that describes the pattern or trend in data represented by input and output variables.</p>
+</blockquote>
+<p>Although the term <em>trendline</em> includes the word “line”, trendlines are not always lines, they can also be curves. We will be using linear trendlines, quadratic trendlines, and exponential trendlines.</p>
+<div id="community-service-example" class="section level3">
+<div name="community_service_example" data-unique="community_service_example"></div><h3>Community Service Example</h3>
+<p>A study conducted in 2014 showed that “American’s who actively work to better their communities have higher overall well-being than those who do not.” <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> Although the actual data of the study is confidential and cannot be shared here, the following data is recreated to reflect the results of the actual study. This fabricated data shows the score earned by 10 fictitious individuals on a well-being index along with the number of hours of community service they have completed in the past month.</p>
+<center>
+<table style="width:56%;" class="table table-condensed">
+<colgroup>
+<col width="29%">
+<col width="26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Well-Being Index Score (Scale of 0-100)</th>
+<th>Hours of Community Service Completed in the Past Month</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>32</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>43</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>47</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>58</td>
+<td>2.5</td>
+</tr>
+<tr class="odd">
+<td>61</td>
+<td>3.5</td>
+</tr>
+<tr class="even">
+<td>72</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>76</td>
+<td>6.5</td>
+</tr>
+<tr class="even">
+<td>87</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>92</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+</center>
+<p>To study the trend shown by this data we use Excel to create a scatter plot. We decide if the trend is linear, quadratic, or exponential and then add the appropriate trendline and equation to the graph.</p>
+<center>
+<div class="figure">
+<img src="./Lesson 9_ Making Predictions From Data_files/CommunityService.png" alt="A scatterplot of the data above, with a trendline added, y = 4.9745x + 43.213">
+<p class="caption">A scatterplot of the data above, with a trendline added, y = 4.9745x + 43.213</p>
+</div>
+</center>
+<p><br> <br> Looking at the graph, we can see that all the points don’t lie directly on the line. However, the line does show the general trend of the data. In this case, Excel tells us the general relationship between the Well-Being Index Score and the Hours of Community Service can be described with the function</p>
+<p><span class="math display"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-9-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;4.9745&lt;/mn&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;43.213&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-36" style="width: 10.273em; display: inline-block;"><span style="display: inline-block; position: relative; width: 9.252em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.384em 1009.19em 2.586em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-37"><span class="mi" id="MathJax-Span-38" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-39" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mn" id="MathJax-Span-40" style="font-family: MathJax_Main; padding-left: 0.303em;">4.9745</span><span class="mi" id="MathJax-Span-41" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-42" style="font-family: MathJax_Main; padding-left: 0.243em;">+</span><span class="mn" id="MathJax-Span-43" style="font-family: MathJax_Main; padding-left: 0.243em;">43.213</span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.137em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>y</mi><mo>=</mo><mn>4.9745</mn><mi>x</mi><mo>+</mo><mn>43.213</mn></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-9">
+y=4.9745x+43.213
+</script></span></p>
+<p>where the input, <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-10-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-44" style="width: 0.664em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.604em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.54em 2.345em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-45"><span class="mi" id="MathJax-Span-46" style="font-family: MathJax_Math-italic;">x</span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-10">x</script></span>, represents the number of hours of community service completed in the past month and the output, <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-11-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-47" style="width: 0.544em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.48em 2.526em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-48"><span class="mi" id="MathJax-Span-49" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 0.87em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></span></span><script type="math/tex" id="MathJax-Element-11">y</script></span>, represents the score on the well-being index.</p>
+<p>We can use this function to predict the well-being score for individuals, based on the number of hours of community service they have completed in the previous month.</p>
+<p>For individuals who have completed 10 hours of community service in the past month,</p>
+<p><span class="math display"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-12-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;4.9745&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;43.213&lt;/mn&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;92.958.&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-50" style="width: 16.58em; display: inline-block;"><span style="display: inline-block; position: relative; width: 14.898em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.324em 1014.84em 2.646em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-51"><span class="mi" id="MathJax-Span-52" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-53" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mn" id="MathJax-Span-54" style="font-family: MathJax_Main; padding-left: 0.303em;">4.9745</span><span class="mo" id="MathJax-Span-55" style="font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-56" style="font-family: MathJax_Main;">10</span><span class="mo" id="MathJax-Span-57" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-58" style="font-family: MathJax_Main; padding-left: 0.243em;">+</span><span class="mn" id="MathJax-Span-59" style="font-family: MathJax_Main; padding-left: 0.243em;">43.213</span><span class="mo" id="MathJax-Span-60" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mn" id="MathJax-Span-61" style="font-family: MathJax_Main; padding-left: 0.303em;">92.958.</span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.27em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>y</mi><mo>=</mo><mn>4.9745</mn><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo><mo>+</mo><mn>43.213</mn><mo>=</mo><mn>92.958.</mn></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-12">
+y=4.9745(10)+43.213=92.958.
+</script></span></p>
+<p>For individuals who have completed 5 hours of community service in the past month,</p>
+<p><span class="math display"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-13-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;4.9745&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;43.213&lt;/mn&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;68.0855.&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-62" style="width: 16.58em; display: inline-block;"><span style="display: inline-block; position: relative; width: 14.898em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.324em 1014.84em 2.646em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-63"><span class="mi" id="MathJax-Span-64" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-65" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mn" id="MathJax-Span-66" style="font-family: MathJax_Main; padding-left: 0.303em;">4.9745</span><span class="mo" id="MathJax-Span-67" style="font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-68" style="font-family: MathJax_Main;">5</span><span class="mo" id="MathJax-Span-69" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-70" style="font-family: MathJax_Main; padding-left: 0.243em;">+</span><span class="mn" id="MathJax-Span-71" style="font-family: MathJax_Main; padding-left: 0.243em;">43.213</span><span class="mo" id="MathJax-Span-72" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mn" id="MathJax-Span-73" style="font-family: MathJax_Main; padding-left: 0.303em;">68.0855.</span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.27em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>y</mi><mo>=</mo><mn>4.9745</mn><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo><mo>+</mo><mn>43.213</mn><mo>=</mo><mn>68.0855.</mn></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-13">
+y=4.9745(5)+43.213=68.0855.
+</script></span> The prediction is that on average, individuals who complete 10 hours of community service will have a higher well-being score than individuals who complete 5 hours of community service.</p>
+</div>
+<div id="excel-instructions---trendlines" class="section level3 tabset tabset-fade">
+<div name="excel_instructions_-_trendlines" data-unique="excel_instructions_-_trendlines"></div><h3>Excel Instructions - Trendlines</h3>
+<p>Click on each of the five steps below to learn how to create the community service scatter plot and trendline.</p>
+<ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a role="tab" data-toggle="tab" href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#step-1" aria-controls="step-1">Step 1</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#step-2" aria-controls="step-2">Step 2</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#step-3" aria-controls="step-3">Step 3</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#step-4" aria-controls="step-4">Step 4</a></li><li role="presentation"><a role="tab" data-toggle="tab" href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#step-5" aria-controls="step-5">Step 5</a></li></ul><div class="tab-content"><div id="step-1" class="section level4 tab-pane tabbed-pane fade active in" role="tabpanel">
+
+<p>Create an Excel file that lists the input variable in the first column and the output variable in the second column.</p>
+<div class="figure">
+<img src="./Lesson 9_ Making Predictions From Data_files/scatterplotstep1.png" alt="Spreadsheet containing the hours of community service and the Well-Being Index Score">
+<p class="caption">Spreadsheet containing the hours of community service and the Well-Being Index Score</p>
+</div>
+<hr>
+</div><div id="step-2" class="section level4 tab-pane tabbed-pane fade" role="tabpanel">
+
+<p>[1] Highlight the data you want to graph, then</p>
+<ul>
+<li>[2] Select “Insert”.</li>
+<li>[3] Select the “Scatter plot” icon and the “Scatter option”.</li>
+</ul>
+<div class="figure">
+<img src="./Lesson 9_ Making Predictions From Data_files/scatterplotstep2.png" alt="Spreadsheet example">
+<p class="caption">Spreadsheet example</p>
+</div>
+<hr>
+</div><div id="step-3" class="section level4 tab-pane tabbed-pane fade" role="tabpanel">
+
+<p>Once the scatter plot has been created,</p>
+<ul>
+<li>[1] Right-click on one of the points.</li>
+<li>[2] From the right-click menu, select “Add Trendline”</li>
+</ul>
+<div class="figure">
+<img src="./Lesson 9_ Making Predictions From Data_files/scatterplotstep3.png" alt="Spreadsheet example">
+<p class="caption">Spreadsheet example</p>
+</div>
+<hr>
+</div><div id="step-4" class="section level4 tab-pane tabbed-pane fade" role="tabpanel">
+
+<p>From the “Format Trendline” menu,</p>
+<ul>
+<li>[1] Because the scatter plot for these data show a linear trend, select “Linear”. (Select “Polynomial” to create a quadratic trendline or “Exponential” to create an exponential trendline.)</li>
+<li>[2] Check the box to “Display Equation on Chart”.</li>
+</ul>
+<div class="figure">
+<img src="./Lesson 9_ Making Predictions From Data_files/scatterplotstep4.png" alt="Spreadsheet example">
+<p class="caption">Spreadsheet example</p>
+</div>
+<hr>
+</div><div id="step-5" class="section level4 tab-pane tabbed-pane fade" role="tabpanel">
+
+<p>Add chart elements [1], such as axis titles and chart titles to create a finished graph [2].</p>
+<div class="figure">
+<img src="./Lesson 9_ Making Predictions From Data_files/scatterplotstep5.png" alt="Spreadsheet example">
+<p class="caption">Spreadsheet example</p>
+</div>
+<hr>
+</div></div>
+
+
+
+
+</div>
+<div id="practice-creating-trendline" class="section level3">
+<div name="practice_creating_trendline" data-unique="practice_creating_trendline"></div><h3>Practice Creating Trendline</h3>
+<div>
+<iframe width="780" height="600" frameborder="0" src="./Lesson 9_ Making Predictions From Data_files/story_html5.html" style="-webkit-transform:scale(0.8);-moz-transform-scale(0.8);" align="center">
+</iframe>
+</div>
+<hr>
+</div>
+</div>
+<div id="correlation-vs-causation" class="section level2">
+<div name="correlation_vs_causation" data-unique="correlation_vs_causation"></div><h2>Correlation vs Causation</h2>
+<p>In chapter 2 we learned about flaws in logical reasoning. If we are not careful, the use of trendlines can lead to a very common flaw in logical reasoning.</p>
+<p>When a scatter plot shows a trend or relationship between two variables we say that the variables are <em>correlated</em>. However, this does not necessarily mean that changes in the input variable <em>cause</em> a change in the output variable.</p>
+<blockquote>
+<p>A correlation between two variables does not imply there is a causal relationship.</p>
+</blockquote>
+<p>A causal relationship means that changes in one variable <em>cause</em> a change in the other variable. Often, when variables are correlated there is an alternative explanation, other than causation, for the relationship. Here are a few examples.</p>
+<div id="fleas-a-sign-of-good-health" class="section level4">
+<h4>Fleas: A Sign of Good Health</h4>
+<p><br></p>
+<center>
+<iframe id="kaltura_player" src="./Lesson 9_ Making Predictions From Data_files/1157612(1).html" width="608" height="350" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" frameborder="0" title="Kaltura Player">
+</iframe>
+</center>
+<p><br></p>
+<p>As explained by President Eyring, it is easy to assume a casual relationship when none exists.</p>
+</div>
+<div id="eating-ice-cream-causes-shark-attacks" class="section level4">
+<h4>Eating Ice Cream Causes Shark Attacks!</h4>
+<p>Here is another classic example. The following scatter plot and trendline show the relationship between monthly ice cream sales and the number of shark attacks per month.<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a></p>
+<center>
+<div class="figure">
+<img src="./Lesson 9_ Making Predictions From Data_files/sharkattacks.jpg" alt="scatterplot plus trendline showing ice cream sales compared to shark attacks">
+<p class="caption">scatterplot plus trendline showing ice cream sales compared to shark attacks</p>
+</div>
+</center>
+<p>This scatter plot clearly shows a linear trend where increased monthly ice cream sales correspond with a high number of shark attacks. However, what we are seeing in the graph is a <em>correlation</em> between ice cream sales and shark attacks. We cannot conclude that eating ice cream <em>causes</em> shark attacks.</p>
+<p>The correlation seen in these data has a more rational explanation. Because of warmer weather, people are more likely to eat ice cream in the summer than they are in the winter. So ice cream sales are higher during summer months. Similarly, warmer weather during the summer means that people are more likely to go to the ocean and go swimming. Due to there being more people in the water, as well as because of the migratory patterns of sharks, shark attacks are more common during the summer than in the winter. So the relationship between ice cream sales and shark attacks is due to the fact that both are more common during summer months when the temperature is warmer. This <em>alternative explanation</em> explains the trend we see in the data.</p>
+<p>In the case of sharks and ice cream, it is pretty obvious that we should look for for an alternative explanation. However, no matter what the data represents, we should always remember that seeing a correlation or trend in the data does not tell us that there is a causal relationship where changes in one variable <em>cause</em> a change in the other variable. Here is an example where it is more tempting to say a causal relationship exists. We first saw this example in Lesson 2.</p>
+</div>
+<div id="soda-leads-to-heart-attacks" class="section level4">
+<h4>Soda Leads to Heart Attacks</h4>
+<p>A research study published in 2013 examined the effect that drinking soda (or other sugary drinks) has on cardiovascular health. The data examined in this study showed a trend where men who drank more soda had higher risk of having a heart attack. However, as stated in a CBSNews article reporting on the study, “other doctors caution that just because there may be a link between sugary drinks and heart attacks does not mean sugar is causing them.”<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a> The article went on to point out that men who drink sugary drinks often consume them along with burgers, fries, and other unhealthy food choices. Having a generally unhealthy diet and other poor health habits may be the actual cause of increased heart attack risk.</p>
+</div>
+<div id="community-service-and-well-being" class="section level4">
+<h4>Community Service and Well-Being</h4>
+<p>We should apply the rule that correlation does not imply causation to the community service example from the previous section. This example shows a trend where people who do more community service tend to have higher scores on a well-being index. However, we cannot conclude that it is the community service that <em>causes</em> them to have better well-being. We just know there is a correlation and that an individual who does more community service is more likely to have a higher score on the well-being index. It might be the community service that causes a feeling of well-being, but there might also be an alternative explanation. The information we have been given is not enough to tell.</p>
+</div>
+</div>
+<div id="linear-quadratic-or-exponential" class="section level2">
+<div name="linear,_quadratic,_or_exponential" data-unique="linear,_quadratic,_or_exponential"></div><h2>Linear, Quadratic, or Exponential?</h2>
+<p>Excel can create linear, quadratic, and exponential trendlines. To decide which of these three types of trendlines would apply in a particular situation we look at the shape of the scatter plot. If the general shape of the points are close to being a line, we use a linear trendline. If the general shape of the graph resembles a u-shaped parabola, we use a quadratic trendline. If the general shape is non-linear and increasing (or decreasing), we use an exponential trendline.</p>
+<p>Linear trendlines are used with data that is linear and has a constant rate of change. Quadratic and exponential trendlines are used with data that is non-linear and has a variable rate of change.</p>
+<div>
+<iframe width="780" height="700" frameborder="0" src="./Lesson 9_ Making Predictions From Data_files/story_html5(1).html" style="-webkit-transform:scale(0.8);-moz-transform-scale(0.8);" align="center">
+</iframe>
+</div>
+<hr>
+<div id="writing-exponential-functions" class="section level4">
+<h4>Writing Exponential Functions</h4>
+<p>Because of the rules of exponents (that we reviewed in Chapter 6), exponential functions can be written a variety of different ways. For example,</p>
+<p><span class="math display"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-14-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mtable columnalign=&quot;right left right left right left right left right left right left&quot; rowspacing=&quot;3pt&quot; columnspacing=&quot;0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em&quot; displaystyle=&quot;true&quot;&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd /&gt;&lt;mtd&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x00D7;&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd /&gt;&lt;mtd&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;msup&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/msup&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd /&gt;&lt;mtd&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo maxsize=&quot;2.047em&quot; minsize=&quot;2.047em&quot;&gt;(&lt;/mo&gt;&lt;/mrow&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;msup&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo maxsize=&quot;2.047em&quot; minsize=&quot;2.047em&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/msup&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;/math&gt;" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-74" style="width: 7.15em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.429em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(-1.559em 1006.25em 5.408em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-75"><span class="mtable" id="MathJax-Span-76" style="padding-right: 0.183em; padding-left: 0.183em;"><span style="display: inline-block; position: relative; width: 6.069em; height: 0px;"><span style="position: absolute; clip: rect(2.946em 1001.8em 8.892em -999.997em); top: -6.604em; left: 0em;"><span style="display: inline-block; position: relative; width: 1.925em; height: 0px;"><span style="position: absolute; clip: rect(3.126em 1001.8em 4.447em -999.997em); top: -6.784em; right: 0em;"><span class="mtd" id="MathJax-Span-77"><span class="mrow" id="MathJax-Span-78"><span class="mi" id="MathJax-Span-79" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span class="mo" id="MathJax-Span-80" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-81" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-82" style="font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.847em 1000em 4.207em -999.997em); top: -5.342em; right: 0em;"><span class="mtd" id="MathJax-Span-93"><span class="mrow" id="MathJax-Span-94"></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.847em 1000em 4.207em -999.997em); top: -3.961em; right: 0em;"><span class="mtd" id="MathJax-Span-107"><span class="mrow" id="MathJax-Span-108"></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.847em 1000em 4.207em -999.997em); top: -1.919em; right: 0em;"><span class="mtd" id="MathJax-Span-123"><span class="mrow" id="MathJax-Span-124"></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span><span style="display: inline-block; width: 0px; height: 6.61em;"></span></span><span style="position: absolute; clip: rect(3.907em 1004.21em 10.874em -999.997em); top: -7.625em; left: 1.925em;"><span style="display: inline-block; position: relative; width: 4.207em; height: 0px;"><span style="position: absolute; clip: rect(3.006em 1002.95em 4.207em -999.997em); top: -6.784em; left: 0em;"><span class="mtd" id="MathJax-Span-83"><span class="mrow" id="MathJax-Span-84"><span class="mi" id="MathJax-Span-85"></span><span class="mo" id="MathJax-Span-86" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="msubsup" id="MathJax-Span-87" style="padding-left: 0.303em;"><span style="display: inline-block; position: relative; width: 1.505em; height: 0px;"><span style="position: absolute; clip: rect(3.186em 1000.42em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mn" id="MathJax-Span-88" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.483em;"><span class="texatom" id="MathJax-Span-89"><span class="mrow" id="MathJax-Span-90"><span class="mo" id="MathJax-Span-91" style="font-size: 70.7%; font-family: MathJax_Main;">−</span><span class="mi" id="MathJax-Span-92" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(2.946em 1003.85em 4.207em -999.997em); top: -5.342em; left: 0em;"><span class="mtd" id="MathJax-Span-95"><span class="mrow" id="MathJax-Span-96"><span class="mi" id="MathJax-Span-97"></span><span class="mo" id="MathJax-Span-98" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="msubsup" id="MathJax-Span-99" style="padding-left: 0.303em;"><span style="display: inline-block; position: relative; width: 2.465em; height: 0px;"><span style="position: absolute; clip: rect(3.186em 1000.42em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mn" id="MathJax-Span-100" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.483em;"><span class="texatom" id="MathJax-Span-101"><span class="mrow" id="MathJax-Span-102"><span class="mo" id="MathJax-Span-103" style="font-size: 70.7%; font-family: MathJax_Main;">−</span><span class="mn" id="MathJax-Span-104" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-105" style="font-size: 70.7%; font-family: MathJax_Main;">×</span><span class="mi" id="MathJax-Span-106" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(2.946em 1004.15em 4.447em -999.997em); top: -3.961em; left: 0em;"><span class="mtd" id="MathJax-Span-109"><span class="mrow" id="MathJax-Span-110"><span class="mi" id="MathJax-Span-111"></span><span class="mo" id="MathJax-Span-112" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mo" id="MathJax-Span-113" style="font-family: MathJax_Main; padding-left: 0.303em;">(</span><span class="msubsup" id="MathJax-Span-114"><span style="display: inline-block; position: relative; width: 1.505em; height: 0px;"><span style="position: absolute; clip: rect(3.186em 1000.42em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mn" id="MathJax-Span-115" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.483em;"><span class="texatom" id="MathJax-Span-116"><span class="mrow" id="MathJax-Span-117"><span class="mo" id="MathJax-Span-118" style="font-size: 70.7%; font-family: MathJax_Main;">−</span><span class="mn" id="MathJax-Span-119" style="font-size: 70.7%; font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span><span class="msubsup" id="MathJax-Span-120"><span style="display: inline-block; position: relative; width: 0.844em; height: 0px;"><span style="position: absolute; clip: rect(3.126em 1000.3em 4.447em -999.997em); top: -4.021em; left: 0em;"><span class="mo" id="MathJax-Span-121" style="font-family: MathJax_Main;">)</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.363em;"><span class="mi" id="MathJax-Span-122" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(2.345em 1004.21em 5.168em -999.997em); top: -1.919em; left: 0em;"><span class="mtd" id="MathJax-Span-125"><span class="mrow" id="MathJax-Span-126"><span class="mi" id="MathJax-Span-127"></span><span class="mo" id="MathJax-Span-128" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="texatom" id="MathJax-Span-129" style="padding-left: 0.303em;"><span class="mrow" id="MathJax-Span-130"><span class="mo" id="MathJax-Span-131" style="vertical-align: 0em;"><span style="font-family: MathJax_Size3;">(</span></span></span></span><span class="mfrac" id="MathJax-Span-132"><span style="display: inline-block; position: relative; width: 0.604em; height: 0px; margin-right: 0.123em; margin-left: 0.123em;"><span style="position: absolute; clip: rect(3.186em 1000.42em 4.207em -999.997em); top: -4.682em; left: 50%; margin-left: -0.237em;"><span class="mn" id="MathJax-Span-133" style="font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.186em 1000.42em 4.207em -999.997em); top: -3.36em; left: 50%; margin-left: -0.237em;"><span class="mn" id="MathJax-Span-134" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(0.844em 1000.6em 1.264em -999.997em); top: -1.318em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.604em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.084em;"></span></span></span></span><span class="msubsup" id="MathJax-Span-135" style=""><span style="display: inline-block; position: relative; width: 1.204em; height: 0px;"><span style="position: absolute; clip: rect(2.405em 1000.54em 5.168em -999.997em); top: -4.021em; left: 0em;"><span class="texatom" id="MathJax-Span-136" style=""><span class="mrow" id="MathJax-Span-137"><span class="mo" id="MathJax-Span-138" style="vertical-align: 0em;"><span style="font-family: MathJax_Size3;">)</span></span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -5.222em; left: 0.724em;"><span class="mi" id="MathJax-Span-139" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span><span style="display: inline-block; width: 0px; height: 7.631em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -3.463em; border-left: 0px solid; width: 0px; height: 7.47em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true"><mtr><mtd><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mtd><mtd><mi></mi><mo>=</mo><msup><mn>2</mn><mrow class="MJX-TeXAtom-ORD"><mo>−</mo><mi>x</mi></mrow></msup></mtd></mtr><mtr><mtd></mtd><mtd><mi></mi><mo>=</mo><msup><mn>2</mn><mrow class="MJX-TeXAtom-ORD"><mo>−</mo><mn>1</mn><mo>×</mo><mi>x</mi></mrow></msup></mtd></mtr><mtr><mtd></mtd><mtd><mi></mi><mo>=</mo><mo stretchy="false">(</mo><msup><mn>2</mn><mrow class="MJX-TeXAtom-ORD"><mo>−</mo><mn>1</mn></mrow></msup><msup><mo stretchy="false">)</mo><mi>x</mi></msup></mtd></mtr><mtr><mtd></mtd><mtd><mi></mi><mo>=</mo><mrow class="MJX-TeXAtom-ORD"><mo maxsize="2.047em" minsize="2.047em">(</mo></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow class="MJX-TeXAtom-ORD"><mo maxsize="2.047em" minsize="2.047em">)</mo></mrow><mi>x</mi></msup></mtd></mtr></mtable></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-14">
+\begin{align}
+f(x)&=2^{-x}\\
+&=2^{-1\times x}\\
+&=(2^{-1})^x\\
+&=\bigg(\frac{1}{2}\bigg)^x\\
+\end{align}
+</script></span> Therefore, even though the equations <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-15-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-140" style="width: 5.348em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.808em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.264em 1004.81em 2.646em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-141"><span class="mi" id="MathJax-Span-142" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span class="mo" id="MathJax-Span-143" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-144" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-145" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-146" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="msubsup" id="MathJax-Span-147" style="padding-left: 0.303em;"><span style="display: inline-block; position: relative; width: 1.505em; height: 0px;"><span style="position: absolute; clip: rect(3.186em 1000.42em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mn" id="MathJax-Span-148" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.483em;"><span class="texatom" id="MathJax-Span-149"><span class="mrow" id="MathJax-Span-150"><span class="mo" id="MathJax-Span-151" style="font-size: 70.7%; font-family: MathJax_Main;">−</span><span class="mi" id="MathJax-Span-152" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.337em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mn>2</mn><mrow class="MJX-TeXAtom-ORD"><mo>−</mo><mi>x</mi></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-15">f(x)=2^{-x}</script></span> and <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-16-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo maxsize=&quot;1.2em&quot; minsize=&quot;1.2em&quot;&gt;(&lt;/mo&gt;&lt;/mrow&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;msup&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo maxsize=&quot;1.2em&quot; minsize=&quot;1.2em&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-153" style="width: 6.009em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.408em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.204em 1005.41em 2.886em -999.997em); top: -2.279em; left: 0em;"><span class="mrow" id="MathJax-Span-154"><span class="mi" id="MathJax-Span-155" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span class="mo" id="MathJax-Span-156" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-157" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-158" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-159" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="texatom" id="MathJax-Span-160" style="padding-left: 0.303em;"><span class="mrow" id="MathJax-Span-161"><span class="mo" id="MathJax-Span-162" style="vertical-align: 0em;"><span style="font-family: MathJax_Size1;">(</span></span></span></span><span class="mfrac" id="MathJax-Span-163"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; margin-right: 0.123em; margin-left: 0.123em;"><span style="position: absolute; clip: rect(3.366em 1000.3em 4.207em -999.997em); top: -4.441em; left: 50%; margin-left: -0.177em;"><span class="mn" id="MathJax-Span-164" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.366em 1000.3em 4.207em -999.997em); top: -3.601em; left: 50%; margin-left: -0.177em;"><span class="mn" id="MathJax-Span-165" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(0.844em 1000.48em 1.264em -999.997em); top: -1.318em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.483em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.084em;"></span></span></span></span><span class="msubsup" id="MathJax-Span-166" style=""><span style="display: inline-block; position: relative; width: 0.964em; height: 0px;"><span style="position: absolute; clip: rect(3.006em 1000.3em 4.568em -999.997em); top: -4.021em; left: 0em;"><span class="texatom" id="MathJax-Span-167" style=""><span class="mrow" id="MathJax-Span-168"><span class="mo" id="MathJax-Span-169" style="vertical-align: 0em;"><span style="font-family: MathJax_Size1;">)</span></span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.622em; left: 0.483em;"><span class="mi" id="MathJax-Span-170" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.285em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.53em; border-left: 0px solid; width: 0px; height: 1.537em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mrow class="MJX-TeXAtom-ORD"><mo maxsize="1.2em" minsize="1.2em">(</mo></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mrow class="MJX-TeXAtom-ORD"><mo maxsize="1.2em" minsize="1.2em">)</mo></mrow><mi>x</mi></msup></math></span></span><script type="math/tex" id="MathJax-Element-16">f(x)=\big(\frac{1}{2}\big)^x</script></span> look different from one another, they represent the same function and have the same graph.</p>
+<p>Excel uses the exponential number <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-17-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-171" style="width: 0.544em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.42em 2.345em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-172"><span class="mi" id="MathJax-Span-173" style="font-family: MathJax_Math-italic;">e</span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi></math></span></span><script type="math/tex" id="MathJax-Element-17">e</script></span> when giving the equation for an exponential function. The exponential number <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-18-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-174" style="width: 0.544em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.42em 2.345em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-175"><span class="mi" id="MathJax-Span-176" style="font-family: MathJax_Math-italic;">e</span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi></math></span></span><script type="math/tex" id="MathJax-Element-18">e</script></span> is a constant that is approximately equal to 2.7182. Like <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-19-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;&amp;#x03C0;&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-177" style="width: 0.664em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.604em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.6em 2.345em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-178"><span class="mi" id="MathJax-Span-179" style="font-family: MathJax_Math-italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.603em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>π</mi></math></span></span><script type="math/tex" id="MathJax-Element-19">\pi</script></span>, the exponential number <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-20-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-180" style="width: 0.544em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.42em 2.345em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-181"><span class="mi" id="MathJax-Span-182" style="font-family: MathJax_Math-italic;">e</span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi></math></span></span><script type="math/tex" id="MathJax-Element-20">e</script></span> is a non-terminating, non-repeating decimal. Because <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-21-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-183" style="width: 0.544em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.42em 2.345em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-184"><span class="mi" id="MathJax-Span-185" style="font-family: MathJax_Math-italic;">e</span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>e</mi></math></span></span><script type="math/tex" id="MathJax-Element-21">e</script></span> is a number that shows up naturally in a variety of applications, it was given a special name and symbol.</p>
+<p>We can use the rules of exponents to show that <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-22-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mn&gt;1.098621&lt;/mn&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-186" style="width: 7.691em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.91em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.204em 1006.91em 2.646em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-187"><span class="mi" id="MathJax-Span-188" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span class="mo" id="MathJax-Span-189" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-190" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-191" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-192" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="msubsup" id="MathJax-Span-193" style="padding-left: 0.303em;"><span style="display: inline-block; position: relative; width: 3.607em; height: 0px;"><span style="position: absolute; clip: rect(3.426em 1000.42em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mi" id="MathJax-Span-194" style="font-family: MathJax_Math-italic;">e</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.381em; left: 0.483em;"><span class="texatom" id="MathJax-Span-195"><span class="mrow" id="MathJax-Span-196"><span class="mn" id="MathJax-Span-197" style="font-size: 70.7%; font-family: MathJax_Main;">1.098621</span><span class="mi" id="MathJax-Span-198" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.337em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>e</mi><mrow class="MJX-TeXAtom-ORD"><mn>1.098621</mn><mi>x</mi></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-22">f(x)=e^{1.098621x}</script></span> and <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-23-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-199" style="width: 4.748em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.267em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.324em 1004.27em 2.646em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-200"><span class="mi" id="MathJax-Span-201" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span class="mo" id="MathJax-Span-202" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-203" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-204" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-205" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="msubsup" id="MathJax-Span-206" style="padding-left: 0.303em;"><span style="display: inline-block; position: relative; width: 0.964em; height: 0px;"><span style="position: absolute; clip: rect(3.186em 1000.48em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mn" id="MathJax-Span-207" style="font-family: MathJax_Main;">3</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.483em;"><span class="mi" id="MathJax-Span-208" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.27em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mn>3</mn><mi>x</mi></msup></math></span></span><script type="math/tex" id="MathJax-Element-23">f(x)=3^x</script></span> are different equations that represent the same function.</p>
+<span class="math display"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-24-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mtable columnalign=&quot;right left right left right left right left right left right left&quot; rowspacing=&quot;3pt&quot; columnspacing=&quot;0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em&quot; displaystyle=&quot;true&quot;&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mn&gt;1.098621&lt;/mn&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd /&gt;&lt;mtd&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mn&gt;1.098621&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;msup&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/msup&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd /&gt;&lt;mtd&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;2.7182&lt;/mn&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mn&gt;1.098621&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;msup&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/msup&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd /&gt;&lt;mtd&gt;&lt;mi&gt;&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/msup&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;/math&gt;" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-209" style="width: 11.595em; display: inline-block;"><span style="display: inline-block; position: relative; width: 10.453em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(-0.898em 1010.27em 4.748em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-210"><span class="mtable" id="MathJax-Span-211" style="padding-right: 0.183em; padding-left: 0.183em;"><span style="display: inline-block; position: relative; width: 10.093em; height: 0px;"><span style="position: absolute; clip: rect(3.006em 1001.8em 8.351em -999.997em); top: -5.943em; left: 0em;"><span style="display: inline-block; position: relative; width: 1.925em; height: 0px;"><span style="position: absolute; clip: rect(3.126em 1001.8em 4.447em -999.997em); top: -6.063em; right: 0em;"><span class="mtd" id="MathJax-Span-212"><span class="mrow" id="MathJax-Span-213"><span class="mi" id="MathJax-Span-214" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span class="mo" id="MathJax-Span-215" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-216" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-217" style="font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.847em 1000em 4.207em -999.997em); top: -4.622em; right: 0em;"><span class="mtd" id="MathJax-Span-228"><span class="mrow" id="MathJax-Span-229"></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.847em 1000em 4.207em -999.997em); top: -3.18em; right: 0em;"><span class="mtd" id="MathJax-Span-243"><span class="mrow" id="MathJax-Span-244"></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.847em 1000em 4.207em -999.997em); top: -1.799em; right: 0em;"><span class="mtd" id="MathJax-Span-258"><span class="mrow" id="MathJax-Span-259"></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span><span style="display: inline-block; width: 0px; height: 5.949em;"></span></span><span style="position: absolute; clip: rect(3.066em 1008.17em 8.532em -999.997em); top: -6.123em; left: 1.925em;"><span style="display: inline-block; position: relative; width: 8.171em; height: 0px;"><span style="position: absolute; clip: rect(2.946em 1004.99em 4.207em -999.997em); top: -6.063em; left: 0em;"><span class="mtd" id="MathJax-Span-218"><span class="mrow" id="MathJax-Span-219"><span class="mi" id="MathJax-Span-220"></span><span class="mo" id="MathJax-Span-221" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="msubsup" id="MathJax-Span-222" style="padding-left: 0.303em;"><span style="display: inline-block; position: relative; width: 3.607em; height: 0px;"><span style="position: absolute; clip: rect(3.426em 1000.42em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mi" id="MathJax-Span-223" style="font-family: MathJax_Math-italic;">e</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.483em;"><span class="texatom" id="MathJax-Span-224"><span class="mrow" id="MathJax-Span-225"><span class="mn" id="MathJax-Span-226" style="font-size: 70.7%; font-family: MathJax_Main;">1.098621</span><span class="mi" id="MathJax-Span-227" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(2.946em 1005.83em 4.447em -999.997em); top: -4.622em; left: 0em;"><span class="mtd" id="MathJax-Span-230"><span class="mrow" id="MathJax-Span-231"><span class="mi" id="MathJax-Span-232"></span><span class="mo" id="MathJax-Span-233" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mo" id="MathJax-Span-234" style="font-family: MathJax_Main; padding-left: 0.303em;">(</span><span class="msubsup" id="MathJax-Span-235"><span style="display: inline-block; position: relative; width: 3.186em; height: 0px;"><span style="position: absolute; clip: rect(3.426em 1000.42em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mi" id="MathJax-Span-236" style="font-family: MathJax_Math-italic;">e</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.483em;"><span class="texatom" id="MathJax-Span-237"><span class="mrow" id="MathJax-Span-238"><span class="mn" id="MathJax-Span-239" style="font-size: 70.7%; font-family: MathJax_Main;">1.098621</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span><span class="msubsup" id="MathJax-Span-240"><span style="display: inline-block; position: relative; width: 0.844em; height: 0px;"><span style="position: absolute; clip: rect(3.126em 1000.3em 4.447em -999.997em); top: -4.021em; left: 0em;"><span class="mo" id="MathJax-Span-241" style="font-family: MathJax_Main;">)</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.363em;"><span class="mi" id="MathJax-Span-242" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(2.946em 1008.17em 4.447em -999.997em); top: -3.18em; left: 0em;"><span class="mtd" id="MathJax-Span-245"><span class="mrow" id="MathJax-Span-246"><span class="mi" id="MathJax-Span-247"></span><span class="mo" id="MathJax-Span-248" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mo" id="MathJax-Span-249" style="font-family: MathJax_Main; padding-left: 0.303em;">(</span><span class="msubsup" id="MathJax-Span-250"><span style="display: inline-block; position: relative; width: 5.529em; height: 0px;"><span style="position: absolute; clip: rect(3.186em 1002.71em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mn" id="MathJax-Span-251" style="font-family: MathJax_Main;">2.7182</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 2.766em;"><span class="texatom" id="MathJax-Span-252"><span class="mrow" id="MathJax-Span-253"><span class="mn" id="MathJax-Span-254" style="font-size: 70.7%; font-family: MathJax_Main;">1.098621</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span><span class="msubsup" id="MathJax-Span-255"><span style="display: inline-block; position: relative; width: 0.844em; height: 0px;"><span style="position: absolute; clip: rect(3.126em 1000.3em 4.447em -999.997em); top: -4.021em; left: 0em;"><span class="mo" id="MathJax-Span-256" style="font-family: MathJax_Main;">)</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.363em;"><span class="mi" id="MathJax-Span-257" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.126em 1002.35em 4.207em -999.997em); top: -1.799em; left: 0em;"><span class="mtd" id="MathJax-Span-260"><span class="mrow" id="MathJax-Span-261"><span class="mi" id="MathJax-Span-262"></span><span class="mo" id="MathJax-Span-263" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="msubsup" id="MathJax-Span-264" style="padding-left: 0.303em;"><span style="display: inline-block; position: relative; width: 0.964em; height: 0px;"><span style="position: absolute; clip: rect(3.186em 1000.48em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mn" id="MathJax-Span-265" style="font-family: MathJax_Main;">3</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.483em;"><span class="mi" id="MathJax-Span-266" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span><span style="display: inline-block; width: 0px; height: 6.129em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -2.73em; border-left: 0px solid; width: 0px; height: 6.003em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0em 2em 0em 2em 0em 2em 0em 2em 0em 2em 0em" displaystyle="true"><mtr><mtd><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mtd><mtd><mi></mi><mo>=</mo><msup><mi>e</mi><mrow class="MJX-TeXAtom-ORD"><mn>1.098621</mn><mi>x</mi></mrow></msup></mtd></mtr><mtr><mtd></mtd><mtd><mi></mi><mo>=</mo><mo stretchy="false">(</mo><msup><mi>e</mi><mrow class="MJX-TeXAtom-ORD"><mn>1.098621</mn></mrow></msup><msup><mo stretchy="false">)</mo><mi>x</mi></msup></mtd></mtr><mtr><mtd></mtd><mtd><mi></mi><mo>=</mo><mo stretchy="false">(</mo><msup><mn>2.7182</mn><mrow class="MJX-TeXAtom-ORD"><mn>1.098621</mn></mrow></msup><msup><mo stretchy="false">)</mo><mi>x</mi></msup></mtd></mtr><mtr><mtd></mtd><mtd><mi></mi><mo>=</mo><msup><mn>3</mn><mi>x</mi></msup></mtd></mtr></mtable></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-24">
+\begin{align}
+f(x)&=e^{1.098621x}\\
+&=(e^{1.098621})^x\\
+&=(2.7182^{1.098621})^x\\
+&=3^x\\
+\end{align}
+</script></span>
+<hr>
+</div>
+</div>
+<div id="predictions-from-trendlines" class="section level2">
+<div name="predictions_from_trendlines" data-unique="predictions_from_trendlines"></div><h2>Predictions from Trendlines</h2>
+<p>Creating a scatter plot and trendline gives us a function to describe the relationship between two variables. We can use this function to make predictions. The following example demonstrates how we could use predictions from trendlines as part of the Quantitative Reasoning Process.</p>
+<hr>
+<div name="_understand_the_problem_" data-unique="_understand_the_problem_"></div><h3 class="step one">
+Understand the Problem
+</h3>
+<p>Olivia has a 10 year old Honda Civic. It is completely paid for so Olivia has been saving money each month for the purchase of her next car. She currently has $10,500 saved to purchase a new car.</p>
+<center>
+<img src="./Lesson 9_ Making Predictions From Data_files/2007_Honda_Civic_Sedan.jpg" alt="picture of a Honda Civic">
+</center>
+<p><br> <br></p>
+<p>The new car Olivia wants to buy will cost $18,000, including all taxes and fees. Olivia needs to determine whether she will get enough money from the sale of her old Honda Civic to purchase the new car.</p>
+<hr>
+<div name="_identify_variables__assumptions_" data-unique="_identify_variables__assumptions_"></div><h3 class="step two">
+Identify Variables &amp; Assumptions
+</h3>
+<p>As Olivia considers the variables and assumptions in her situation, she identifies the following key variables:</p>
+<ul>
+<li>The total cost of the new car.</li>
+<li>The condition of the Honda Civic she is selling.</li>
+<li>The amount of money she will get from selling her Honda Civic.</li>
+</ul>
+<p>She realizes she is making the following assumptions:</p>
+<ul>
+<li>She will pay cash for her new car and not borrow any money.</li>
+<li>She can use all the money from the sale of the Honda Civic for the purchase of her new car.</li>
+<li>She can buy a new car for $18,000.</li>
+<li>She has $10,500 to use to purchase her new car.</li>
+<li>If she can sell her Honda Civic for at least $7500, she can purchase the new car.</li>
+</ul>
+<hr>
+<div name="_apply_quantitative_tools_" data-unique="_apply_quantitative_tools_"></div><h3 class="step three">
+Apply Quantitative Tools
+</h3>
+<p>Olivia knows she needs to be able to sell her 10 year old Honda Civic for at least $7500. She finds several Honda Civics for sale, but none of them are the same year as hers, so she isn’t sure how much she will earn from the sale of her old car. Olivia creates a spreadsheet listing the age and sale price of Honda Civics in her area with similar features and condition as her Honda Civic.</p>
+<p>The scatter plot shows how the value of the Honda Civic changes over time. After looking at the scatter plot, Olivia realizes the data is non-linear so she decides to use an exponential trendline to describe the relationship between the age and sale price of Honda Civics.</p>
+<div class="figure">
+<img src="./Lesson 9_ Making Predictions From Data_files/Civic1.png" alt="Spreadsheet showing the data: age of car and sale price, also with a trendline showing an exponential downward relation">
+<p class="caption">Spreadsheet showing the data: age of car and sale price, also with a trendline showing an exponential downward relation</p>
+</div>
+<p>From the scatter plot shown above, we see that the function relating age and sale price of Honda Civics is</p>
+<p><span class="math display"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-25-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;18422&lt;/mn&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;0.1&lt;/mn&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-267" style="width: 7.571em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.79em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.144em 1006.79em 2.586em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-268"><span class="mi" id="MathJax-Span-269" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-270" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mn" id="MathJax-Span-271" style="font-family: MathJax_Main; padding-left: 0.303em;">18422</span><span class="msubsup" id="MathJax-Span-272"><span style="display: inline-block; position: relative; width: 2.405em; height: 0px;"><span style="position: absolute; clip: rect(3.426em 1000.42em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mi" id="MathJax-Span-273" style="font-family: MathJax_Math-italic;">e</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.483em;"><span class="texatom" id="MathJax-Span-274"><span class="mrow" id="MathJax-Span-275"><span class="mo" id="MathJax-Span-276" style="font-size: 70.7%; font-family: MathJax_Main;">−</span><span class="mn" id="MathJax-Span-277" style="font-size: 70.7%; font-family: MathJax_Main;">0.1</span><span class="mi" id="MathJax-Span-278" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.337em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>y</mi><mo>=</mo><mn>18422</mn><msup><mi>e</mi><mrow class="MJX-TeXAtom-ORD"><mo>−</mo><mn>0.1</mn><mi>x</mi></mrow></msup></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-25">
+y=18422e^{-0.1x}
+</script></span> where <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-26-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-279" style="width: 0.664em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.604em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.54em 2.345em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-280"><span class="mi" id="MathJax-Span-281" style="font-family: MathJax_Math-italic;">x</span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-26">x</script></span> represents the age of the car and <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-27-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-282" style="width: 0.544em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.48em 2.526em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-283"><span class="mi" id="MathJax-Span-284" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 0.87em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></span></span><script type="math/tex" id="MathJax-Element-27">y</script></span> represents the sale price.</p>
+<p>Olivia uses this equation to predict the amount of money she will get from selling her 10-year old car:</p>
+<p><span class="math display"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-28-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;18422&lt;/mn&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;0.1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;&amp;#x0024;&lt;/mi&gt;&lt;mn&gt;6777.08&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-285" style="width: 14.237em; display: inline-block;"><span style="display: inline-block; position: relative; width: 12.796em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.084em 1012.74em 2.586em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-286"><span class="mi" id="MathJax-Span-287" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-288" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mn" id="MathJax-Span-289" style="font-family: MathJax_Main; padding-left: 0.303em;">18422</span><span class="msubsup" id="MathJax-Span-290"><span style="display: inline-block; position: relative; width: 3.246em; height: 0px;"><span style="position: absolute; clip: rect(3.426em 1000.42em 4.207em -999.997em); top: -4.021em; left: 0em;"><span class="mi" id="MathJax-Span-291" style="font-family: MathJax_Math-italic;">e</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; top: -4.441em; left: 0.483em;"><span class="texatom" id="MathJax-Span-292"><span class="mrow" id="MathJax-Span-293"><span class="mo" id="MathJax-Span-294" style="font-size: 70.7%; font-family: MathJax_Main;">−</span><span class="mn" id="MathJax-Span-295" style="font-size: 70.7%; font-family: MathJax_Main;">0.1</span><span class="mo" id="MathJax-Span-296" style="font-size: 70.7%; font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-297" style="font-size: 70.7%; font-family: MathJax_Main;">10</span><span class="mo" id="MathJax-Span-298" style="font-size: 70.7%; font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span></span></span><span class="mo" id="MathJax-Span-299" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mi" id="MathJax-Span-300" style="font-family: MathJax_Main; padding-left: 0.303em;">$</span><span class="mn" id="MathJax-Span-301" style="font-family: MathJax_Main;">6777.08</span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.403em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>y</mi><mo>=</mo><mn>18422</mn><msup><mi>e</mi><mrow class="MJX-TeXAtom-ORD"><mo>−</mo><mn>0.1</mn><mo stretchy="false">(</mo><mn>10</mn><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mi mathvariant="normal">$</mi><mn>6777.08</mn></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-28">
+y=18422e^{-0.1(10)}=\$6777.08 
+</script></span></p>
+<p>Rounding up, Olivia concludes that she will be able to sell her car for around $6800. However, she realizes that this prediction gives an average price and that there will be variation in the selling price of Honda Civics. So she might be able to sell her car for a little more or a little less than this predicted price.</p>
+<hr>
+<div name="_make_an_informed_decision_" data-unique="_make_an_informed_decision_"></div><h3 class="step four">
+Make an Informed Decision
+</h3>
+Because Olivia has $10,500 saved, if she sells her car for $6800 she would have a total of $17,300. However, Olivia knows she needs at least $18,000 for the new car she wants to purchase. She will likely be about $700 short of the amount she needs to purchase the new car. She decides to wait to sell her car until she has saved more money.
+<hr>
+<div name="_evaluate_your_reasoning_" data-unique="_evaluate_your_reasoning_"></div><h3 class="step five">
+Evaluate Your Reasoning
+</h3>
+<p>As Olivia reflects on her decision, she is disappointed. Because she was excited to purchase the new car, she looks again at the new car options. She finds a less expensive car that she likes and that will meet her needs. Since the alternative car is only $16,000 it fits within her current budgeted amount. She revises her decision and goes ahead and puts her Honda Civic up for sale. She lists the sale price as $7,800 so she still has room to negotiate with potential buyers about the price.</p>
+<hr>
+<div id="practice-making-a-prediction" class="section level3">
+<div name="practice_making_a_prediction" data-unique="practice_making_a_prediction"></div><h3>Practice Making a Prediction</h3>
+<div>
+<iframe width="780" height="600" frameborder="0" src="./Lesson 9_ Making Predictions From Data_files/story_html5(2).html" style="-webkit-transform:scale(0.8);-moz-transform-scale(0.8);" align="center">
+</iframe>
+</div>
+<hr>
+</div>
+</div>
+<div id="example-old-faithful" class="section level2">
+<div name="example:_old_faithful" data-unique="example:_old_faithful"></div><h2>Example: Old Faithful</h2>
+<p>In the opening video, we saw that Sophia and Emmy predicted the time of the next eruption of Old Faithful Geyser. Old Faithful is one of the most famous features of Yellowstone National Park. The <a href="http://www.yellowstonepark.com/about-old-faithful/">park’s website</a> boasts that Old Faithful is “the most famous geyser in the world”.</p>
+<p>Old Faithful is named for its predictable eruptions. Visitors to the park come from all over the world to see the eruption of Old Faithful.<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a> The geyser is so predictable that the park actually posts signs letting visitors know how many minutes until the next eruption. Most other geysers in the Yellowstone and elsewhere erupt less frequently and their eruptions are much more difficult to predict.</p>
+<p>The scatter plot below shows how the park uses the length of the previous eruption to determine how long it will be until the next eruption. The scatter plot shows the general pattern found in actual data recorded by researchers for past eruptions.</p>
+<center>
+<img src="./Lesson 9_ Making Predictions From Data_files/unnamed-chunk-2-1.png" width="672">
+</center>
+<p>Notice that if the previous eruption of Old Faithful lasted for 4.0 minutes, then we would predict the time until the next eruption to be anywhere from 68 to 90 minutes. See the blue points in the plot below.</p>
+<p>The red points in the plot predict that if the previous eruption lasted 2.0 minutes, we would expect a waiting time between 42 and 66 minutes until the next eruption. We can see that the longer the previous eruption lasted, the longer we would expect to wait until the next eruption.</p>
+<center>
+<img src="./Lesson 9_ Making Predictions From Data_files/unnamed-chunk-3-1.png" width="672">
+</center>
+<p>If we could fit a mathematical model to the data, then we could create an equation that would allow us to predict the average waiting time to the next eruption based on the length of the current eruption.</p>
+<p>Note that the general trend in the data is linear. This suggests a line would be the most appropriate mathematical model for these data.</p>
+<center>
+<img src="./Lesson 9_ Making Predictions From Data_files/unnamed-chunk-4-1.png" width="672">
+</center>
+<p>The mathematical model we get from this data is given by the equation <span class="math display"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-29-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;33.47&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;10.73&lt;/mn&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-302" style="width: 9.132em; display: inline-block;"><span style="display: inline-block; position: relative; width: 8.231em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.384em 1008.17em 2.586em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-303"><span class="mi" id="MathJax-Span-304" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-305" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mn" id="MathJax-Span-306" style="font-family: MathJax_Main; padding-left: 0.303em;">33.47</span><span class="mo" id="MathJax-Span-307" style="font-family: MathJax_Main; padding-left: 0.243em;">+</span><span class="mn" id="MathJax-Span-308" style="font-family: MathJax_Main; padding-left: 0.243em;">10.73</span><span class="mi" id="MathJax-Span-309" style="font-family: MathJax_Math-italic;">x</span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.137em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>y</mi><mo>=</mo><mn>33.47</mn><mo>+</mo><mn>10.73</mn><mi>x</mi></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-29">
+  y = 33.47 + 10.73x
+</script></span> where the input variable, <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-30-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-310" style="width: 0.664em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.604em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.54em 2.345em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-311"><span class="mi" id="MathJax-Span-312" style="font-family: MathJax_Math-italic;">x</span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math></span></span><script type="math/tex" id="MathJax-Element-30">x</script></span>, represents the length of the most recent eruption and the output variable, <span class="math inline"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-31-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-313" style="width: 0.544em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.565em 1000.48em 2.526em -999.997em); top: -2.159em; left: 0em;"><span class="mrow" id="MathJax-Span-314"><span class="mi" id="MathJax-Span-315" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.165em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 0.87em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi></math></span></span><script type="math/tex" id="MathJax-Element-31">y</script></span>, represents the waiting time to the next eruption. If the most recent eruption lasted 4.0 minutes, then the model would estimate that the next eruption will occur in <span class="math display"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-32-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;33.74&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;10.73&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;4.0&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;76.66&lt;/mn&gt;&lt;mtext&gt;&amp;#xA0;&lt;/mtext&gt;&lt;mtext&gt;minutes&lt;/mtext&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;/math&gt;" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-316" style="width: 19.282em; display: inline-block;"><span style="display: inline-block; position: relative; width: 17.36em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(1.324em 1017.3em 2.646em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-317"><span class="mi" id="MathJax-Span-318" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-319" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mn" id="MathJax-Span-320" style="font-family: MathJax_Main; padding-left: 0.303em;">33.74</span><span class="mo" id="MathJax-Span-321" style="font-family: MathJax_Main; padding-left: 0.243em;">+</span><span class="mn" id="MathJax-Span-322" style="font-family: MathJax_Main; padding-left: 0.243em;">10.73</span><span class="mo" id="MathJax-Span-323" style="font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-324" style="font-family: MathJax_Main;">4.0</span><span class="mo" id="MathJax-Span-325" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-326" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mn" id="MathJax-Span-327" style="font-family: MathJax_Main; padding-left: 0.303em;">76.66</span><span class="mtext" id="MathJax-Span-328" style="font-family: MathJax_Main;">&nbsp;</span><span class="mtext" id="MathJax-Span-329" style="font-family: MathJax_Main;">minutes</span><span class="mo" id="MathJax-Span-330" style="font-family: MathJax_Main;">.</span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.27em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>y</mi><mo>=</mo><mn>33.74</mn><mo>+</mo><mn>10.73</mn><mo stretchy="false">(</mo><mn>4.0</mn><mo stretchy="false">)</mo><mo>=</mo><mn>76.66</mn><mtext>&nbsp;</mtext><mtext>minutes</mtext><mo>.</mo></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-32">
+  y = 33.74 + 10.73(4.0) = 76.66 \ \text{minutes}.
+</script></span> Park rangers can add 76.66 minutes to the time at which the previous eruption ended, and then <a href="http://geysertimes.org/geyser.php?id=OldFaithful">post a sign</a> near Old Faithful stating when the next eruption would occur. However, note that as shown in the plot above, the actual waiting time could be anywhere from 68 to 90 minutes. So it would be wise to let visitors know that the eruption time could be a little earlier or a little later than the predicted 77.66 minutes from the end of the previous eruption.</p>
+<hr>
+<div>
+<iframe width="780" height="600" frameborder="0" src="./Lesson 9_ Making Predictions From Data_files/story_html5(3).html" style="-webkit-transform:scale(0.8);-moz-transform-scale(0.8);" align="center">
+</iframe>
+</div>
+<hr>
+</div>
+<div id="example-snow-machines-in-yellowstone" class="section level2">
+<div name="example:_snow_machines_in_yellowstone" data-unique="example:_snow_machines_in_yellowstone"></div><h2>Example: Snow Machines in Yellowstone</h2>
+<p>In the opening video, Sophia and Emmy encountered a park ranger who enforced the rule that their snow machines had the best available technology. Yellowstone National Park officials have been given the task of conserving natural resources in the park, while at the same time allowing for use of the park by the public. Conservation and public use can be at odds with one another. The use of snow machines in Yellowstone is an example of where there has been a lot of controversy.</p>
+<center>
+<img src="./Lesson 9_ Making Predictions From Data_files/SnowmobilesYellowstone.jpg" alt="picture of snowmobilers in Yellowstone">
+</center>
+<p><br></p>
+<p>In order to protect the environment in Yellowstone National Park, all snow machines are required to have the best available technology (BAT).<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a> This is because older snow machines have less efficient engines that emit more hydrocarbons and carbon monoxide, which are harmful to the environment. However, restricting the types of snow machines significantly restricts winter access to Yellowstone.</p>
+<p>The officials at the National Park Service used data analysis to help make decisions related to the conservation and use of Yellowstone National Park, such as the use of snow machines. The following example outlines the process used by Yellowstone officials to determine the winter use policy in Yellowstone.</p>
+<hr>
+<div name="_understand_the_problem_19" data-unique="_understand_the_problem_19"></div><h3 class="step one">
+Understand the Problem
+</h3>
+By the late 1990’s the number of snow machines entering Yellowstone during the winter had increased to the point there was a noticeable impact on air quality.<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a> In 1999, an environmental group petitioned the National Park Service and asked them to ban recreational snowmobiling in Yellowstone (and all other National Parks). <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn9" class="footnoteRef" id="fnref9"><sup>9</sup></a> In 2000, in response to noticeable impacts on air quality and the request by an environmental group, the National Park Service decided to phase out the use of snow machines in Yellowstone National Park. In 2001, the National Park Service was sued over their proposed ban of snow machines. Because the National Park Service has a legal mandate to allow for public use of park resources, a federal court overturned Yellowstone’s snow machine ban. Yellowstone officials then decided to carry out several studies in order to determine the best way to balance environmental conservation and public use of the park. <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn10" class="footnoteRef" id="fnref10"><sup>10</sup></a>
+<hr>
+<div name="_identify_variables__assumptions_20" data-unique="_identify_variables__assumptions_20"></div><h3 class="step two">
+Identify Variables &amp; Assumptions
+</h3>
+<p>Some of the key variables identified by researchers were:</p>
+<ul>
+<li>The types of vehicles entering the park</li>
+<li>The number of vehicles entering the park</li>
+<li>Hydrocarbon Emissions</li>
+<li>Carbon Monoxide Emissions</li>
+<li>Types of snow machine engine (2-stroke engines, 4-stroke engines, BAT engines)</li>
+</ul>
+<p>The researchers made several important assumptions:</p>
+<ul>
+<li>Hydrocarbon and carbon monoxide are harmful to the environment</li>
+<li>Decreasing the number of vehicles entering the park will decrease hydrocarbon and carbon monoxide emissions</li>
+<li>BAT snow machines have lower hydrocarbon and carbon monoxide emissions than non-BAT snow machines</li>
+<li>Traveling with a guide will reduce harmful emissions</li>
+</ul>
+<hr>
+<div name="_apply_quantitative_tools_21" data-unique="_apply_quantitative_tools_21"></div><h3 class="step three">
+Apply Quantitative Tools
+</h3>
+<p>Between 2002 and 2011, the National Park Service released eight different reports on the impact of winter use on air quality. You can see a complete list of all of their reports <a href="https://www.nature.nps.gov/air/studies/yell/yellAQwinter.cfm">here</a>. The following explanation shows just a small part of the data examined by Park officials as they used data to make decisions on Park policy.</p>
+<p>At the beginning of their research in 2000, researchers compared carbon monoxide and hydrocarbon emissions from different type of vehicles entering Yellowstone. The following bar-chart shows the estimated annual emissions from automobiles, RVs, snow machines, snowcoaches, and buses for 1992 through 1999.<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn11" class="footnoteRef" id="fnref11"><sup>11</sup></a></p>
+<center>
+<div class="figure">
+<img src="./Lesson 9_ Making Predictions From Data_files/vehiclebarchart.jpg" alt="barplot showing the data above, Snowmobiles releasing the most average annual emmisions">
+<p class="caption">barplot showing the data above, Snowmobiles releasing the most average annual emmisions</p>
+</div>
+</center>
+<p>They also looked at pie charts that showed the source of all annual hydrocarbons and carbon monoxide emissions <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn12" class="footnoteRef" id="fnref12"><sup>12</sup></a>:</p>
+<center>
+<p><img src="./Lesson 9_ Making Predictions From Data_files/HCpie.JPG" alt="Pie chart of the data above"> <img src="./Lesson 9_ Making Predictions From Data_files/COpie.JPG"></p>
+</center>
+<p>From the bar chart and the pie chart, it is clear that snow machines are the largest source of these harmful emissions. This led Park officials to decide that, although they should not completely ban the use of snow machines in Yellowstone, changes to the winter use policy did need to occur.</p>
+<p>They gathered data on how the type of engine a snow machine had impacted the carbon monoxide emissions.<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn13" class="footnoteRef" id="fnref13"><sup>13</sup></a></p>
+<table class="table table-condensed">
+<thead>
+<tr class="header">
+<th>Type of snow machine engine</th>
+<th>Number of snow machines entering Park</th>
+<th>CO (ppm)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2-stroke</td>
+<td>20</td>
+<td>.36</td>
+</tr>
+<tr class="even">
+<td>2-stroke</td>
+<td>22</td>
+<td>1.72</td>
+</tr>
+<tr class="odd">
+<td>2-stroke</td>
+<td>28</td>
+<td>2.41</td>
+</tr>
+<tr class="even">
+<td>2-stroke</td>
+<td>42</td>
+<td>3.16</td>
+</tr>
+<tr class="odd">
+<td>2-stroke</td>
+<td>67</td>
+<td>4.90</td>
+</tr>
+<tr class="even">
+<td>2-stroke</td>
+<td>470</td>
+<td>25.73</td>
+</tr>
+<tr class="odd">
+<td>BAT</td>
+<td>110</td>
+<td>3.20</td>
+</tr>
+<tr class="even">
+<td>BAT</td>
+<td>140</td>
+<td>2.78</td>
+</tr>
+<tr class="odd">
+<td>BAT</td>
+<td>160</td>
+<td>3.02</td>
+</tr>
+<tr class="even">
+<td>BAT</td>
+<td>470</td>
+<td>4.89</td>
+</tr>
+<tr class="odd">
+<td>BAT</td>
+<td>701</td>
+<td>7.64</td>
+</tr>
+<tr class="even">
+<td>BAT</td>
+<td>2750</td>
+<td>24.19</td>
+</tr>
+</tbody>
+</table>
+<p>In order to test their assumption that snow machines with the best available technology (BAT) have lower emissions than older snow machines with 2-stroke engines, they created a scatter plot of these data and created trendlines for each type of snow machine.</p>
+<center>
+<img src="./Lesson 9_ Making Predictions From Data_files/2stroke_vs_BAT.jpg" alt="Scatter plot of emissions from the two different snow machines listed above">
+</center>
+<p>Comparing the slopes of these two lines gave helpful information on how the two different types of snow machines are related to carbon monoxide emissions.</p>
+<p>For snow machines with 2-stroke engines (older technology), the slope of the line is 0.0538. This tells us:</p>
+<p><span class="math display"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-33-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mtext&gt;slope&lt;/mtext&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mtext&gt;change in y&lt;/mtext&gt;&lt;mtext&gt;change in x&lt;/mtext&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mtext&gt;change in carbon monoxide&lt;/mtext&gt;&lt;mtext&gt;change in number of snow machines&lt;/mtext&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;0.0538&lt;/mn&gt;&lt;mtext&gt;&amp;#xA0;ppm&lt;/mtext&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mtext&gt;&amp;#xA0;snow machine&lt;/mtext&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation" style="text-align: center; position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-331" style="width: 38.201em; display: inline-block;"><span style="display: inline-block; position: relative; width: 34.417em; height: 0px; font-size: 111%;"><span style="position: absolute; clip: rect(0.664em 1034.42em 3.306em -999.997em); top: -2.219em; left: 0em;"><span class="mrow" id="MathJax-Span-332"><span class="mtext" id="MathJax-Span-333" style="font-family: MathJax_Main;">slope</span><span class="mo" id="MathJax-Span-334" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mfrac" id="MathJax-Span-335" style="padding-left: 0.303em;"><span style="display: inline-block; position: relative; width: 4.988em; height: 0px; margin-right: 0.123em; margin-left: 0.123em;"><span style="position: absolute; clip: rect(3.126em 1004.87em 4.387em -999.997em); top: -4.742em; left: 50%; margin-left: -2.399em;"><span class="mtext" id="MathJax-Span-336" style="font-family: MathJax_Main;">change in y</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.126em 1004.87em 4.387em -999.997em); top: -3.36em; left: 50%; margin-left: -2.399em;"><span class="mtext" id="MathJax-Span-337" style="font-family: MathJax_Main;">change in x</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(0.844em 1004.99em 1.264em -999.997em); top: -1.318em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 4.988em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.084em;"></span></span></span></span><span class="mo" id="MathJax-Span-338" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mfrac" id="MathJax-Span-339" style="padding-left: 0.303em;"><span style="display: inline-block; position: relative; width: 15.498em; height: 0px; margin-right: 0.123em; margin-left: 0.123em;"><span style="position: absolute; clip: rect(3.126em 1011.72em 4.387em -999.997em); top: -4.742em; left: 50%; margin-left: -5.883em;"><span class="mtext" id="MathJax-Span-340" style="font-family: MathJax_Main;">change in carbon monoxide</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.126em 1015.38em 4.387em -999.997em); top: -3.3em; left: 50%; margin-left: -7.685em;"><span class="mtext" id="MathJax-Span-341" style="font-family: MathJax_Main;">change in number of snow machines</span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(0.844em 1015.5em 1.264em -999.997em); top: -1.318em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 15.498em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.084em;"></span></span></span></span><span class="mo" id="MathJax-Span-342" style="font-family: MathJax_Main; padding-left: 0.303em;">=</span><span class="mfrac" id="MathJax-Span-343" style="padding-left: 0.303em;"><span style="display: inline-block; position: relative; width: 6.91em; height: 0px; margin-right: 0.123em; margin-left: 0.123em;"><span style="position: absolute; clip: rect(3.186em 1004.99em 4.387em -999.997em); top: -4.682em; left: 50%; margin-left: -2.459em;"><span class="mrow" id="MathJax-Span-344"><span class="mn" id="MathJax-Span-345" style="font-family: MathJax_Main;">0.0538</span><span class="mtext" id="MathJax-Span-346" style="font-family: MathJax_Main;">&nbsp;ppm</span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(3.126em 1006.73em 4.207em -999.997em); top: -3.36em; left: 50%; margin-left: -3.36em;"><span class="mrow" id="MathJax-Span-347"><span class="mn" id="MathJax-Span-348" style="font-family: MathJax_Main;">1</span><span class="mtext" id="MathJax-Span-349" style="font-family: MathJax_Main;">&nbsp;snow machine</span></span><span style="display: inline-block; width: 0px; height: 4.027em;"></span></span><span style="position: absolute; clip: rect(0.844em 1006.91em 1.264em -999.997em); top: -1.318em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 6.91em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.084em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.225em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.063em; border-left: 0px solid; width: 0px; height: 2.67em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mtext>slope</mtext><mo>=</mo><mfrac><mtext>change in y</mtext><mtext>change in x</mtext></mfrac><mo>=</mo><mfrac><mtext>change in carbon monoxide</mtext><mtext>change in number of snow machines</mtext></mfrac><mo>=</mo><mfrac><mrow><mn>0.0538</mn><mtext>&nbsp;ppm</mtext></mrow><mrow><mn>1</mn><mtext>&nbsp;snow machine</mtext></mrow></mfrac></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-33">
+\text{slope}=\frac{\text{change in y}}{\text{change in x}}=\frac{\text{change in carbon monoxide}}{\text{change in number of snow machines}}=\frac{0.0538 \text{ ppm}}{1 \text{ snow machine}}
+</script></span> Each 2-stroke engine adds 0.0538 ppm of carbon monoxide. Similarly, since the slope of the line for BAT engines is 0.0081, we know BAT engines add 0.00081 ppm of carbon monoxide. Because these numbers are small they are hard to compare. If we multiply them each by 1000, we see that 1000 2-stroke engines would add 53.8 ppm of carbon monoxide while 1000 BAT engines would only add 8.1 ppm of carbon monoxide.</p>
+<hr>
+<div name="_make_an_informed_decision_22" data-unique="_make_an_informed_decision_22"></div><h3 class="step four">
+Make an Informed Decision
+</h3>
+<p>Based on these calculations (and others that are not shown here), Park officials developed a new policy for winter use in Yellowstone. In 2003 and 2004 they put new winter use restrictions in place. They were again sued over these plans because they restricted winter use in Yellowstone. They again did more research and in 2007 they completed a new plan that allowed for 540 commercially guided, BAT snow machines and 83 snowcoaches to enter the Park each day. <a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn14" class="footnoteRef" id="fnref14"><sup>14</sup></a></p>
+<hr>
+<div name="_evaluate_your_reasoning_23" data-unique="_evaluate_your_reasoning_23"></div><h3 class="step five">
+Evaluate Your Reasoning
+</h3>
+<p>Between 2007 and 2013 and Park reevaluated their winter use plan several more times. Some of the reevaluation occurred as a result of further suits filed in federal court and some of the reevaluation was based on public comment and input.<br>
+In 2011, Park officials gathered data that compared data collected on the number of winter vehicles entering the Park through the West Entrance and carbon monoxide measurements taken near the entrance.</p>
+<p>This scatter plot shows how the number of winter vehicles correlated to carbon monoxide measurements. There is a strong linear relationship that shows that when more cars enter the park, carbon monoxide measurements also increase.<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn15" class="footnoteRef" id="fnref15"><sup>15</sup></a></p>
+<center>
+<img src="./Lesson 9_ Making Predictions From Data_files/Vehicles_vs_CO.jpg" alt="Scatter Plot showing number of winter vehicles versus 8-hour Carbon Monoxide">
+</center>
+<p>The following graph shows a bar chart and a time series plot overlayed on top of each other. It shows how the number of winter vehicles and carbon monoxide measurements have changed over the time period the Park has been changing their policy.<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a></p>
+<center>
+<img src="./Lesson 9_ Making Predictions From Data_files/CO_overtime.jpg" alt="barplot plus time series chart plotting the data given above">
+</center>
+<p>These graphs clearly show that the changes made in 2003-2011 are helping reduce carbon monoxide emissions in the Park.</p>
+<p>In 2013 they revised their policy again based on further study. One common criticism of the plan prior to 2013 was that the public was not allowed to enter the Park unless they were with a commercially guided tour. Also, the management plan allowed 83 snowcoaches per day, but on some days fewer than 83 snowcoaches entered the Park while snow machine users were turned away.</p>
+<p>Park officials revised their guidelines to allow for flexibility in the ratio of snow machines and snow coaches. If fewer snowcoaches enter the park on a given day, they are now able to allow more snow machines to enter. They also added an option for one non-commercially guided group to enter the Park each day.</p>
+<p>You can read all of the details of Yellowstone National Park’s current <a href="https://www.nps.gov/yell/learn/management/currentmgmt.htm">winter-use policy</a> on their website.</p>
+<hr>
+<p>Most of the examples of the Quantitative Reasoning Process have shown how it can be used by individuals to make decisions about their personal and family lives. This example shows how the Quantitative Reasoning Process was used by the National Park Service. The Quantitative Reasoning Process is commonly used by businesses, government agencies, non-profit organizations, communities, and other organizations. Scientists, mathematicians, statisticians, business people, and other professionals use the Quantitative Reasoning Process to help them make decisions in their work.</p>
+<hr>
+</div>
+<div id="lesson-checklist" class="section level2">
+<div name="lesson_checklist" data-unique="lesson_checklist"></div><h2>Lesson Checklist</h2>
+<p>By the end of this lesson, you should be able to:</p>
+<ul>
+<li>identify the input and output variable from a given scenario.</li>
+<li>create a scatter plot of two quantitative variables in Excel.</li>
+<li>identify for given data whether a linear, exponential, or quadratic trendline would be the most appropriate.</li>
+<li>fit a linear, exponential, or quadratic trendline to a scatter plot of data in Excel.</li>
+<li>use a trendline to make a prediction for the average value of the response variable at a given value of the explanatory variable.</li>
+<li>interpret predictions and draw a contextual conclusion</li>
+<li>assess the appropriateness of a trendline for given data</li>
+<li>explain why correlation does not imply causation</li>
+</ul>
+<center>
+© 2018 Brigham Young University - Idaho
+</center>
+</div>
+<div class="footnotes">
+<hr>
+<ol>
+<li id="fn1"><p><a href="https://www.lds.org/liahona/2010/06/things-as-they-really-are?lang=eng">Elder Bednar</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref1">↩</a></p></li>
+<li id="fn2"><p>Jacob 4:13<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref2">↩</a></p></li>
+<li id="fn3"><p><a href="http://www.gallup.com/poll/174785/americans-serving-communities-gain-edge.aspx?utm_source=add_this&amp;utm_medium=addthis.com&amp;utm_campaign=sharing#.U-pK7uNhqns.twitter" class="uri">http://www.gallup.com/poll/174785/americans-serving-communities-gain-edge.aspx?utm_source=add_this&amp;utm_medium=addthis.com&amp;utm_campaign=sharing#.U-pK7uNhqns.twitter</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref3">↩</a></p></li>
+<li id="fn4"><p><a href="https://bb.spokaneschools.org/bbcswebdav/pid-615470-dt-content-rid-264583_4/institution/AP_Stats/SoftChalk/Unit2_Bivariate_Data_Analysis/Unit2_Bivariate_Data_Analysis_print.html" class="uri">https://bb.spokaneschools.org/bbcswebdav/pid-615470-dt-content-rid-264583_4/institution/AP_Stats/SoftChalk/Unit2_Bivariate_Data_Analysis/Unit2_Bivariate_Data_Analysis_print.html</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref4">↩</a></p></li>
+<li id="fn5"><p><a href="http://www.cbsnews.com/news/soda-a-day-may-lead-to-heart-attacks-in-men/" class="uri">http://www.cbsnews.com/news/soda-a-day-may-lead-to-heart-attacks-in-men/</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref5">↩</a></p></li>
+<li id="fn6"><p>The Old Faithful Geyser is only a 2.5 hour drive from the BYU-Idaho campus. You can watch a live webcam of Old Faithful <a href="https://www.nps.gov/features/yell/webcam/oldfaithfulstreaming.html">here</a>.<a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref6">↩</a></p></li>
+<li id="fn7"><p><a href="https://www.nps.gov/yell/learn/management/newbatlist.htm" class="uri">https://www.nps.gov/yell/learn/management/newbatlist.htm</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref7">↩</a></p></li>
+<li id="fn8"><p><a href="https://www.nature.nps.gov/air/studies/yell/yellAQwinter.cfm" class="uri">https://www.nature.nps.gov/air/studies/yell/yellAQwinter.cfm</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref8">↩</a></p></li>
+<li id="fn9"><p><a href="https://www.nps.gov/yell/learn/management/timeline.htm" class="uri">https://www.nps.gov/yell/learn/management/timeline.htm</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref9">↩</a></p></li>
+<li id="fn10"><p><a href="https://www.nps.gov/yell/learn/management/timeline.htm" class="uri">https://www.nps.gov/yell/learn/management/timeline.htm</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref10">↩</a></p></li>
+<li id="fn11"><p><a href="https://www.nature.nps.gov/air/Pubs/pdf/yell/Snowmobile_Report.pdf" class="uri">https://www.nature.nps.gov/air/Pubs/pdf/yell/Snowmobile_Report.pdf</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref11">↩</a></p></li>
+<li id="fn12"><p><a href="https://www.nature.nps.gov/air/Pubs/pdf/yell/Snowmobile_Report.pdf" class="uri">https://www.nature.nps.gov/air/Pubs/pdf/yell/Snowmobile_Report.pdf</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref12">↩</a></p></li>
+<li id="fn13"><p><a href="https://www.nature.nps.gov/air/Pubs/pdf/yell/2009-2011_YELL_WinterAQ.pdf" class="uri">https://www.nature.nps.gov/air/Pubs/pdf/yell/2009-2011_YELL_WinterAQ.pdf</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref13">↩</a></p></li>
+<li id="fn14"><p><a href="https://www.nps.gov/yell/learn/management/timeline.htm" class="uri">https://www.nps.gov/yell/learn/management/timeline.htm</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref14">↩</a></p></li>
+<li id="fn15"><p><a href="https://www.nature.nps.gov/air/Pubs/pdf/yell/2009-2011_YELL_WinterAQ.pdf" class="uri">https://www.nature.nps.gov/air/Pubs/pdf/yell/2009-2011_YELL_WinterAQ.pdf</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref15">↩</a></p></li>
+<li id="fn16"><p><a href="https://www.nature.nps.gov/air/Pubs/pdf/yell/2009-2011_YELL_WinterAQ.pdf" class="uri">https://www.nature.nps.gov/air/Pubs/pdf/yell/2009-2011_YELL_WinterAQ.pdf</a><a href="file:///C:/Users/dr74/Box%20Sync/Quantitative%20Reasoning%20Course%20Content/Lesson9.html#fnref16">↩</a></p></li>
+</ol>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size1, sans-serif;"></div></div></body></html>

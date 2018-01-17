@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+
+.section h3.step {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    height: 36px;
+    line-height: 35px;
+    width: 47%;
+    min-width: 355px;
+    margin: 25px;
+    margin: 25px 0px 15px 14px;
+    padding-top: 0px;
+    padding-left: 24px;
+    position: relative;
+    top 66px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+.step::before {
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-family: serif;
+    font-size: 2.1em;
+    height: 46px;
+    left: -17px;
+    line-height: 43px;
+    font-weight: normal;
+    position: absolute;
+    text-align: center;
+    padding-left: 2px;
+    top: -4px;
+    width: 34px;
+}
+
+
+
+.one {
+    background-color: #596492;
+    background-image: url(Images/step_1.png);
+}
+
+.one::before {
+    content: "1";
+    background-color: #596492;
+}
+
+.two {
+    background-color: #4A967C;
+    background-image: url(Images/step_2.png);
+}
+
+.two::before {
+    content: "2";
+    background-color: #4A967C
+}
+
+.three {
+    background-color: #3298AE;
+    background-image: url(Images/step_3.png);
+}
+
+.three::before {
+    content: "3";
+    background-color: #3298AE
+}
+
+.four {
+    background-color: #AC5E30;
+    background-image: url(Images/step_4.png);
+}
+
+.four::before {
+    content: "4";
+    background-color: #AC5E30
+}
+
+.five {
+    background-color: #788952;
+    background-image: url(Images/step_5.png);
+}
+
+.five::before {
+    content: "5";
+    background-color: #788952
+}
+
+/* tablets */
+
+@media screen and (max-width: 960px) {
+    .step {
+        /* width: 48%; */
+/*        min-width: 600px;*/
+/*
+        height: 50px;
+        line-height: 50px;
+        padding-left: 30px;
+        font-size: 2em
+*/
+    }
+
+/*
+    .step::before {
+        font-size: 55px;
+        height: 75px;
+        width: 50px;
+    }
+*/
+}
+
+/* smartphones  */
+
+@media screen and (max-width: 480px) {
+    .step {
+        /*
+        width: 75%;
+        min-width: 400px;
+        font-size: 1.2em;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 30px;
+        margin-left: 20px
+*/
+    }
+/*
+    .step::before {
+        width: 37px;
+        font-size: .75em;
+        font-size: 2.4rem;
+        height: 55px;
+        top: -7px;
+        left: -19px;
+        padding: 6px 0px;
+    }
+*/
+}
