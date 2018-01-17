@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 
-h3.step {
+h3 .step {
+    display:block;
     color: white;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 16px;
     height: 36px;
     line-height: 35px;
     width: 47%;
     min-width: 377px;
     margin: 25px 0px 60px 14px;
-    padding-top:0px;
+    
     padding-left: 24px;
     position: relative;
     top: 50px;
