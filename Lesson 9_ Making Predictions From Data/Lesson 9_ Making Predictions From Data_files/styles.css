@@ -1,45 +1,51 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 
-
-
-.section h3.step,
-.section h4.step {
+/* Most of the styling of the "h" tags is here. Size and shape of element*/
+.section .step {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
     color: white;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1.15em;
     font-weight: 700;
-    font-size: 1.2em;
     height: 36px;
     line-height: 35px;
-    width: 47%;
-    min-width: 380px;
+    
+/*Zero margin-top and padding-top to counter the spacing created by the .section class*/
     margin: 0px 0px 15px 14px;
-    padding-top: 0px;
+    min-width: 380px;
     padding-left: 24px;
+    padding-top: 0px;
     position: relative;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: contain;
+    width: 47%;
 }
 
+/* For the h3 tags where you want to navigate directly to the tag, I had to add a space above*/
+.section h3.step {
+    font-size: 17px;
+    margin: 80px 0px 15px 14px;
+}
+
+/* The before pseudo-element is for the styling of the oval where the number will be included*/
 .step::before {
-    box-sizing: border-box;
     border: 2px solid white;
     border-radius: 50%;
+    box-sizing: border-box;
     font-family: serif;
     font-size: 2.1em;
+    font-weight: normal;
     height: 46px;
     left: -17px;
     line-height: 43px;
-    font-weight: normal;
+    padding-left: 2px;
     position: absolute;
     text-align: center;
-    padding-left: 2px;
     top: -4px;
     width: 34px;
 }
 
-
-
+/* All of the number classes are for the specific color, image, and number included in the elements*/
 .one {
     background-color: #596492;
     background-image: url(Images/step_1.png);
@@ -91,12 +97,13 @@
 }
 
 /* tablets */
+/* Because of the min-width included originally in the .step class, the media queries aren't doing anything */
 
 @media screen and (max-width: 960px) {
     .step {
         /* width: 48%; */
-/*        min-width: 600px;*/
-/*
+        /*        min-width: 600px;*/
+        /*
         height: 50px;
         line-height: 50px;
         padding-left: 30px;
@@ -104,7 +111,7 @@
 */
     }
 
-/*
+    /*
     .step::before {
         font-size: 55px;
         height: 75px;
@@ -127,7 +134,7 @@
         margin-left: 20px
 */
     }
-/*
+    /*
     .step::before {
         width: 37px;
         font-size: .75em;
